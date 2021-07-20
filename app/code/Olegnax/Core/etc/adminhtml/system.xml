@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+                <tab id="olegnax" translate="label" sortOrder="10">
+                    <label>Olegnax</label>
+                </tab>
+		<section id="olegnax_core_settings" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Core</label>
+			<tab>olegnax</tab>
+			<resource>Olegnax_Core::core_settings</resource>
+			<group id="info" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label">
+				<frontend_model>Olegnax\Core\Block\Adminhtml\System\Config\Form\Info</frontend_model>
+			</group>
+			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>General</label>
+				<field id="lazyload" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label"
+					   type="select">
+					<label>Lazy Load Enabled</label>
+					<frontend_class>on-off-trigger</frontend_class>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
