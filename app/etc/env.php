@@ -1,5 +1,4 @@
 <?php
-tttt
 return [
     'backend' => [
         'frontName' => 'admin'
