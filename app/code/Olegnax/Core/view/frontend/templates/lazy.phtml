@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    require(['jquery'], function ($) {
+        var $body = $('body'),
+            lazy_load = function () {
+                let $lazyImg = $("img.lazy");
+                if ($lazyImg.length)
+                    require(['jquery/lazyload'], function () {
+                        $lazyImg.lazyload({
+                            load: function () {
+                                let $this = $(this),
+                                    $parent = $this.parent(),
+                                    toggle = $this.attr('src') !== $this.attr('data-original');
+                                $this.toggleClass('lazy', toggle).trigger('lazyLoaded.oxlazy');
+                                if ($parent.hasClass('lazy-loader') && !toggle)
+                                    $parent.removeClass('lazy-loader');
+                                $body.trigger('lazyLoaded.oxlazy');
+                            }
+                        });
+                    });
+            };
+        $(function () {
+            $body.off('contentUpdated.oxlazy').on('contentUpdated.oxlazy', lazy_load);
+            lazy_load();
+        });
+    });
+</script>
