@@ -1,30 +1,31 @@
 .menu-style-2 {
     .page-header {
-        .header-banner-below {
-            text-transform: uppercase;
-            font-size: 18px;
-        }
         .header__content {
             .minicart-wrapper {
                 .action.showcart {
                     position: relative;
-                    span.qty {
+                    width: 43px;
+                    span.qty { 
                         margin: 0;
                         padding: 0;
                         border-left: 0;
                         border-left-color: transparent;
                         position: absolute;
                         top: 0;
-                        font-size: 13px;
-                        background-color: @black-color;
-                        width: 15px;
-                        height: 15px;
+                        font-size: 11px;
+                        background-color: @black-color; 
+                        width: 14px;
+                        height: 14px; 
                         right: 0;
                         text-align: center;
-                        color: @white-color !important; 
+                        .counter-number {
+                            color: @white-color !important; 
+                        }
+                    }
+                    svg {
+                        margin-right: 0;
                     }
                 }
-                
             }
         }   
         .header-nav-wide {
@@ -51,7 +52,10 @@
                 }
             }
         } 
-    }
+    } 
+} 
+.header-banner-below {
+    text-transform: uppercase;
+    font-size: 18px;
 }
-
  
