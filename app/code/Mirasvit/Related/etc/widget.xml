@@ -1,0 +1,13 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="Mirasvit\Related\Block\BlockWrapper" id="mst-related-block">
+        <label>Mirasvit Related Products Widget</label>
+        <description>This widget can be used only on the pages that have the product context</description>
+        <parameters>
+            <parameter name="block_id" xsi:type="select" required="true" visible="true" sort_order="10"
+                       source_model="Mirasvit\Related\Model\Config\Source\ProductBlocksSource">
+                <label translate="true">Product Block</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

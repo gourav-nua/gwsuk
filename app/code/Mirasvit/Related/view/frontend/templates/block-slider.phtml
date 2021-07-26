@@ -1,0 +1,56 @@
+<?php
+
+use Mirasvit\Core\Service\SerializeService;
+
+/** @var \Mirasvit\Related\Block\Slider $block */
+$perPage = $block->getProductsPurPage();
+$pages   = $block->getPagesAmount();
+
+/** @var \Mirasvit\Related\Block\Slider $block */
+$productBlocks = array_chunk($block->getProducts()->getItems(), $perPage);
+
+if (count($productBlocks) == 0) {
+    return;
+}
+
+$blockWidth = round(100 / count($productBlocks), 4, PHP_ROUND_HALF_DOWN);
+if ($blockWidth !== (int)$blockWidth) {
+    $blockWidth += 0.0001;
+}
+?>
+
+<div class="mst-related_products__productsList" data-element="productsList">
+    <?php if (count($productBlocks) > 1): ?>
+        <div class="productsList-prev" data-element="prev"></div>
+    <?php endif ?>
+
+    <div class="productsList-list"
+         style="width: <?= count($productBlocks) ?>00%;"
+         data-width="<?= $blockWidth ?>">
+        <?php foreach ($productBlocks as $idx => $products): ?>
+            <div class="productsList-list-item"
+                 style="width: <?= $blockWidth ?>%;"
+                 data-index="<?= $idx ?>"
+                 data-element="item">
+                <?= $block->getInstanceHtml($products) ?>
+            </div>
+        <?php endforeach ?>
+    </div>
+
+    <?php if (count($productBlocks) > 1): ?>
+        <div class="productsList-next" data-element="next"></div>
+    <?php endif ?>
+
+    <?php if (count($productBlocks) > 1): ?>
+        <div class="productsList-paging">
+            <?php foreach ($productBlocks as $idx => $part): ?>
+                <div class="productsList-page <?= $idx === 0 ? '_active' : '' ?>"
+                     data-index="<?= $idx ?>"
+                     data-element="page"></div>
+            <?php endforeach ?>
+        </div>
+    <?php endif ?>
+</div>
+
+<script type="text/x-magento-init"><?= SerializeService::encode($block->getJsonConfig()) ?></script>
+<link rel="stylesheet" type="text/css" media="all" href="<?= $block->getViewFileUrl('Mirasvit_Related::css/source/module/block/_slider.css') ?>"/>

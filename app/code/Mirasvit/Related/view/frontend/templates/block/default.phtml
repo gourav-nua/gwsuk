@@ -1,0 +1,103 @@
+<?php
+
+use Magento\Catalog\Block\Product\ReviewRendererInterface;
+
+/** @var \Mirasvit\Related\Block\Block $block */
+$products = $block->getProducts();
+
+if (count($products) == 0) {
+    return;
+}
+
+$showCart     = true;
+$showWishlist = false;
+$showCompare  = false;
+$type         = 'related';
+?>
+
+<div class="block">
+    <div class="block-title title">
+        <strong role="heading"><?= $block->getTitle() ?></strong>
+    </div>
+    <div class="block-content content">
+        <ol class="products list items product-items products-grid">
+            <?php foreach ($products as $product) : ?>
+
+                <li class="item product product-item">
+
+                    <div class="product-item-info">
+                        <a href="<?= $block->escapeUrl($block->getProductUrl($product)) ?>" class="product photo product-item-photo">
+                            <?= $block->getImage($product, 'related_products_list')->toHtml() ?>
+                        </a>
+
+                        <div class="product details product-item-details">
+                            <strong class="product name product-item-name">
+                                <a class="product-item-link" title="<?= $block->escapeHtml($product->getName()) ?>" href="<?= $block->escapeUrl($block->getProductUrl($product)) ?>">
+                                    <?= $block->escapeHtml($product->getName()) ?>
+                                </a>
+                            </strong>
+
+                            <?= $block->getProductPrice($product) ?>
+
+                            <?= $block->getReviewsSummaryHtml($product, ReviewRendererInterface::SHORT_VIEW) ?>
+
+                            <?php if ($showCart) : ?>
+                                <div class="product actions product-item-actions">
+                                    <?php if ($showCart) : ?>
+                                        <div class="actions-primary">
+                                            <?php if ($product->isSaleable()) : ?>
+                                                <?php if ($product->getTypeInstance()->hasRequiredOptions($product)) : ?>
+                                                    <button class="action tocart primary" data-mage-init='{"redirectUrl": {"url": "<?= $block->escapeUrl($block->getAddToCartUrl($product)) ?>"}}' type="button" title="<?= $block->escapeHtmlForAttr(__('Add to Cart')) ?>">
+                                                        <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                    </button>
+                                                <?php else : ?>
+                                                    <?php
+                                                    $postDataHelper = $this->helper(Magento\Framework\Data\Helper\PostHelper::class);
+                                                    $postData       = $postDataHelper->getPostData($block->escapeUrl($block->getAddToCartUrl($product)), ['product' => $product->getEntityId()])
+                                                    ?>
+                                                    <button class="action tocart primary" data-post='<?= $postData ?>'
+                                                            type="button" title="<?= $block->escapeHtmlForAttr(__('Add to Cart')) ?>">
+                                                        <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                    </button>
+                                                <?php endif; ?>
+                                            <?php else : ?>
+                                                <?php if ($product->getIsSalable()) : ?>
+                                                    <div class="stock available"><span><?= $block->escapeHtml(__('In stock')) ?></span></div>
+                                                <?php else : ?>
+                                                    <div class="stock unavailable"><span><?= $block->escapeHtml(__('Out of stock')) ?></span></div>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
+                                        </div>
+                                    <?php endif ?>
+                                </div>
+                            <?php endif ?>
+
+                            <?php if ($showWishlist || $showCompare) : ?>
+                                <div class="actions-secondary" data-role="add-to-links">
+
+                                    <?php if ($showWishlist && $this->helper('Magento\Wishlist\Helper\Data')->isAllow()) : ?>
+                                        <a href="#" data-post='<?= $block->getAddToWishlistParams($product) ?>'
+                                           class="action"
+                                           data-action="add-to-wishlist towishlist"
+                                           title="<?= $block->escapeHtml(__('Add to Wish List')) ?>">
+                                            <span><?= $block->escapeHtml(__('Add to Wish List')) ?></span>
+                                        </a>
+                                    <?php endif; ?>
+
+                                    <?php if ($showCompare && $block->getAddToCompareUrl()) : ?>
+                                        <?php $compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare') ?>
+                                        <a href="#" class="action tocompare"
+                                           data-post='<?= $compareHelper->getPostDataParams($product) ?>'
+                                           title="<?= $block->escapeHtml(__('Add to Compare')) ?>">
+                                            <span><?= $block->escapeHtml(__('Add to Compare')) ?></span>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </li>
+            <?php endforeach ?>
+        </ol>
+    </div>
+</div>
