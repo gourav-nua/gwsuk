@@ -1,0 +1,21 @@
+{
+  "name": "mirasvit/module-related",
+  "description": "Automatic Related Products",
+  "require": {
+    "magento/framework": "102.0.*|103.0.*",
+    "mirasvit/module-core": "*"
+  },
+  "type": "magento2-module",
+  "version": "1.0.17",
+  "license": [
+    "proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "src/Related/registration.php"
+    ],
+    "psr-4": {
+      "Mirasvit\\Related\\": "src/Related"
+    }
+  }
+}

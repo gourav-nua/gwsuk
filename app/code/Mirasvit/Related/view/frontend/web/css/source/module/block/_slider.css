@@ -1,0 +1,72 @@
+.mst-related_products__productsList {
+  padding: 2.2rem;
+  position: relative;
+  clear: both;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.mst-related_products__productsList .productsList-list {
+  display: block;
+  transition-duration: 500ms;
+  transition-property: transform;
+  transition-timing-function: linear;
+}
+.mst-related_products__productsList .productsList-list .productsList-list-item {
+  display: block;
+  padding: 2.2rem;
+  box-sizing: border-box;
+  float: left;
+}
+.mst-related_products__productsList .productsList-list .productsList-list-item .products,
+.mst-related_products__productsList .productsList-list .productsList-list-item .mst-related__block-bulletproof {
+  margin: 0;
+}
+.mst-related_products__productsList .productsList-paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0rem;
+  clear: both;
+}
+.mst-related_products__productsList .productsList-paging .productsList-page {
+  user-select: none;
+  margin: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2rem;
+  background: #c7c7c7;
+  cursor: pointer;
+  transition: all 100ms;
+}
+.mst-related_products__productsList .productsList-paging .productsList-page._active {
+  background: #ff5500;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.mst-related_products__productsList .productsList-prev,
+.mst-related_products__productsList .productsList-next {
+  height: 6rem;
+  width: 1.5rem;
+  position: absolute;
+  top: calc(50% - 30px);
+  background: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 1.2rem 2rem;
+  background-position: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1000;
+  transition: all 100ms;
+}
+.mst-related_products__productsList .productsList-prev:hover,
+.mst-related_products__productsList .productsList-next:hover {
+  transform: scale(1.3);
+}
+.mst-related_products__productsList .productsList-prev {
+  left: 0;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='12px' height='20px' viewBox='0 0 12 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='iconfinder_next_308956' transform='translate(1.000000, 1.000000)' stroke-width='2' stroke='%23c0c0c0'%3E%3Cpolyline id='Shape' transform='translate(5.000000, 9.000000) scale(-1, 1) translate(-5.000000, -9.000000) ' points='0.5 0 9.5 9 0.5 18'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.mst-related_products__productsList .productsList-next {
+  right: 0;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='12px' height='20px' viewBox='0 0 12 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch --%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='iconfinder_next_308956' transform='translate(1.000000, 1.000000)' stroke-width='2' stroke='%23c0c0c0'%3E%3Cpolyline id='Shape' points='0.5 0 9.5 9 0.5 18'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}

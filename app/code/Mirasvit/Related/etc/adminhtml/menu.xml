@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mirasvit_Related::related" title="Related Products" module="Mirasvit_Related"
+             resource="Mirasvit_Related::related" sortOrder="15" parent="Magento_Backend::marketing"/>
+
+        <add id="Mirasvit_Related::related_block" title="Product Blocks" module="Mirasvit_Related" resource="Mirasvit_Related::related"
+             action="mst_related/block" parent="Mirasvit_Related::related"/>
+
+        <add id="Mirasvit_Related::related_rule" title="Product Selection Rules" module="Mirasvit_Related" resource="Mirasvit_Related::related"
+             action="mst_related/rule" parent="Mirasvit_Related::related"/>
+    </menu>
+</config>

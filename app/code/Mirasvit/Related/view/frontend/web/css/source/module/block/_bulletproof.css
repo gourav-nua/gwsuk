@@ -1,0 +1,75 @@
+[data-related-block] {
+  width: 100%;
+}
+.mst-related__block-bulletproof {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+.mst-related__block-bulletproof .bulletproof-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item {
+  min-width: 200px;
+  flex: 1 1 0;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-photo {
+  display: flex;
+  width: 152px;
+  height: 190px;
+  align-items: center;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-photo img {
+  height: auto;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-details {
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+  max-width: 100%;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-details .bulletproof-item-name .bulletproof-item-link {
+  color: #333;
+  font-weight: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-details .bulletproof-item-name .bulletproof-item-link:hover {
+  text-decoration: underline;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-details .price-box {
+  margin-top: 10px;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-details .price-box .price-label {
+  color: #666666;
+  font-size: 12px;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-details .price-box .price {
+  font-weight: bold;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-details .product-reviews-summary {
+  margin-top: 10px;
+}
+.mst-related__block-bulletproof .bulletproof-content .bulletproof-items .bulletproof-item .bulletproof-item-info .bulletproof-item-details .bulletproof-item-actions {
+  margin-top: 10px;
+}

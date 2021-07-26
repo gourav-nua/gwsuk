@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--DATA-->
+    <preference for="Mirasvit\Related\Api\Data\BlockInterface" type="Mirasvit\Related\Model\Block"/>
+    <preference for="Mirasvit\Related\Api\Data\RuleInterface" type="Mirasvit\Related\Model\Rule"/>
+    <preference for="Mirasvit\Related\Api\Data\AnalyticsInterface" type="Mirasvit\Related\Model\Analytics"/>
+
+    <!--Entity Manager-->
+    <type name="Magento\Framework\EntityManager\MetadataPool">
+        <arguments>
+            <argument name="metadata" xsi:type="array">
+                <item name="Mirasvit\Related\Api\Data\BlockInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="const">Mirasvit\Related\Api\Data\BlockInterface::TABLE_NAME</item>
+                    <item name="identifierField" xsi:type="const">Mirasvit\Related\Api\Data\BlockInterface::ID</item>
+                </item>
+                <item name="Mirasvit\Related\Api\Data\RuleInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="const">Mirasvit\Related\Api\Data\RuleInterface::TABLE_NAME</item>
+                    <item name="identifierField" xsi:type="const">Mirasvit\Related\Api\Data\RuleInterface::ID</item>
+                </item>
+                <item name="Mirasvit\Related\Api\Data\AnalyticsInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="const">Mirasvit\Related\Api\Data\AnalyticsInterface::TABLE_NAME</item>
+                    <item name="identifierField" xsi:type="const">Mirasvit\Related\Api\Data\AnalyticsInterface::ID</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\HydratorPool">
+        <arguments>
+            <argument name="hydrators" xsi:type="array">
+                <item name="Mirasvit\Related\Api\Data\BlockInterface" xsi:type="string">Magento\Framework\EntityManager\AbstractModelHydrator</item>
+                <item name="Mirasvit\Related\Api\Data\RuleInterface" xsi:type="string">Magento\Framework\EntityManager\AbstractModelHydrator</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!--UI-->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="related_block_listing_data_source" xsi:type="string">Mirasvit\Related\Model\ResourceModel\Block\Grid</item>
+                <item name="related_rule_listing_data_source" xsi:type="string">Mirasvit\Related\Model\ResourceModel\Rule\Grid</item>
+            </argument>
+        </arguments>
+    </type>
+
+
+    <type name="Magento\Sales\Model\Service\OrderService">
+        <plugin name="Mirasvit_Related::analyticsTrackOrder" type="Mirasvit\Related\Plugin\Sales\Model\Service\OrderService\AnalyticsTrackOrderPlugin"/>
+    </type>
+</config>
