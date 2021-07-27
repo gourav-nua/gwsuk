@@ -1776,7 +1776,8 @@
                 "email": "c_sharp@mail.ru"
             }
         ],
-        "description": "Guzzle6 transport for Vault PHP client"
+        "description": "Guzzle6 transport for Vault PHP client",
+        "abandoned": true
     },
     {
         "name": "dasprid/enum",
@@ -18527,6 +18528,46 @@
         ]
     },
     {
+        "name": "mageplaza/module-core",
+        "version": "1.4.11",
+        "version_normalized": "1.4.11.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mageplaza/module-core.git",
+            "reference": "45cf1e6a79ca82acc1fe82372bbb4e83ea308b6b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mageplaza/module-core/zipball/45cf1e6a79ca82acc1fe82372bbb4e83ea308b6b",
+            "reference": "45cf1e6a79ca82acc1fe82372bbb4e83ea308b6b",
+            "shasum": ""
+        },
+        "time": "2021-07-21T06:58:49+00:00",
+        "type": "magento2-module",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "registration.php"
+            ],
+            "psr-4": {
+                "Mageplaza\\Core\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "proprietary"
+        ],
+        "authors": [
+            {
+                "name": "Mageplaza",
+                "email": "support@mageplaza.com",
+                "homepage": "https://www.mageplaza.com",
+                "role": "Technical Support"
+            }
+        ],
+        "description": "Mageplaza Core for Magento 2"
+    },
+    {
         "name": "mikey179/vfsstream",
         "version": "v1.6.9",
         "version_normalized": "1.6.9.0",
@@ -21864,7 +21905,8 @@
             }
         ],
         "description": "Provides a list of PHP built-in functions that operate on resources",
-        "homepage": "https://www.github.com/sebastianbergmann/resource-operations"
+        "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
+        "abandoned": true
     },
     {
         "name": "sebastian/type",

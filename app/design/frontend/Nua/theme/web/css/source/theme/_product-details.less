@@ -1,3 +1,58 @@
+.catalog-product-view {
+    .athlete2_product__bottom {
+        .block {
+            .title {
+                strong {
+                    font-weight: @font-weight-400;
+                }
+            }
+        }
+    }
+}
+
 .product-info-main {
     margin-top: 0;
+    .stock {
+        &.available {
+            color: @green-color;
+        }
+        &.unavailable {
+            color: @red-color;
+        }
+    }
+    .product-info-price {
+        flex-wrap: wrap;
+        align-items: end;
+        .product-info-stock-sku {
+            margin-bottom: 10px;
+            width: 100%;
+            .type {
+                &::after {
+                    content: ":";
+                }
+            }
+            .value {
+                font-weight: @font-weight-600;
+            }
+        }
+    }
+    .product.data.items {
+        > .item.title {
+            > .switch {
+                font-size: 22px;
+                font-weight: @font-weight-400;
+                font-family: @font-knockout;
+            }
+        }
+    }
+    .product {
+        &.attribute {
+            &.sku {
+                color:@dark-color;
+            }
+        }
+        
+    }
 }  
+
+

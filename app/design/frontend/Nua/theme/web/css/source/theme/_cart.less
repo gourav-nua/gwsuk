@@ -1,0 +1,39 @@
+.minicart-items {
+    .icon {
+        &-minus {
+            border: 1px solid @black-color;
+        }
+        &-plus {
+            border: 1px solid @black-color;
+        }
+    }
+    .action {
+        &.delete {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            &:before {
+                content: "\f014";
+                font: normal normal normal 14px/1 FontAwesome;
+            }
+        }
+    }
+}
+
+.column {
+    &.main {
+            .cart-summary { 
+            #block-discount {
+                float: none;
+                margin-left: 0;
+            }
+            .block {
+                .title {
+                    strong {
+                        font-weight: @font-weight-400;
+                    }
+                }
+            }
+        }
+    }
+}
+ 
