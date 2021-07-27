@@ -16,5 +16,7 @@
           </block>
         </referenceContainer>
         <referenceBlock name="reviews.tab" remove="true" />
+        
+        <move element="product.info.stock.sku" destination="product.info.price" before="product.price.final"/>
     </body>
 </page>

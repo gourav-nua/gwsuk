@@ -312,6 +312,7 @@ return [
         'Mageplaza_GiftCard' => 1,
         'Mirasvit_Core' => 1,
         'Mirasvit_Related' => 1,
+        'Nuadesign_CustomProduct' => 1,
         'Olegnax_Athlete2' => 1,
         'Olegnax_Core' => 1,
         'Olegnax_BannerSlider' => 1,
