@@ -118,7 +118,7 @@ define([
                 autoPlay: 3000, //Set AutoPlay to 3 seconds
                 items : 4,
                 nav: true,
-                navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+                navText : ['<span></span>','<span></span>'],
                 itemsDesktop : [1199,5],
                 itemsDesktopSmall : [900,4], // betweem 900px and 601px
                 itemsTablet: [700,2], // 2 items between 600 and 480

@@ -11,8 +11,8 @@
                 aria-level="2"
                 text="label"/>
     </div>
-    <div class="block-content">
-        <div css="'products-' + displayMode">
+    <div class="block-content recently-viewed">
+        <div class="crosssell" css="'products-' + displayMode">
             <ol class="product-items products list items owl-carousel">
                 <li class="product-item" repeat="foreach: filteredRows, item: '$row'">
                     <div class="product-item-info">
@@ -25,7 +25,7 @@
                                 <render args="$col.getBody()"/>
                             </fastForEach>
 
-                            <div if="regionHasElements('action-primary-area') || regionHasElements('action-secondary-area')"
+                            <!-- <div if="regionHasElements('action-primary-area') || regionHasElements('action-secondary-area')"
                                  class="product-item-actions">
                                 <div class="actions-primary" if="regionHasElements('action-primary-area')">
                                     <fastForEach args="data: getRegion('action-primary-area'), as: '$col'" >
@@ -41,7 +41,7 @@
                                 </div>
 
                                 
-                            </div>
+                            </div> -->
 
                             <div if="regionHasElements('description-area')"
                                  class="product-item-description">

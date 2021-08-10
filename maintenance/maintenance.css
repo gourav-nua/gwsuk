@@ -1,0 +1,14 @@
+.maint-block {
+    margin-top: 20vh;
+    text-align: center;
+    font-family: sans-serif;
+}
+body {
+	background-color: #000;
+}
+.maint-block  strong {
+	color: #fff;
+}
+.maint-block  p {
+	color: #fff;
+}

@@ -8,8 +8,8 @@
                 </arguments>
             </referenceBlock>
         </referenceBlock>
-         <referenceContainer name="content">
-          <block class="Magento\Cms\Block\Block" name="recently-view-products" after="catalog.product.related">
+         <referenceContainer name="main.content">
+          <block class="Magento\Cms\Block\Block" name="recently-view-products" after="-">
             <arguments>
               <argument name="block_id" xsi:type="string">recently-view-products</argument>
             </arguments>

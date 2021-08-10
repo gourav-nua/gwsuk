@@ -1,0 +1,108 @@
+.checkout {
+    &-container {
+        .opc-wrapper {
+            .step-title {
+                font-weight: @font-weight-400;
+            }
+        }
+        .opc-block-summary {
+            > .title {
+                font-weight: @font-weight-400;
+            }
+        }
+        .opc-block-shipping-information {
+            .shipping-information-title {
+                font-weight: @font-weight-400;
+            }
+        }
+        .opc-progress-bar-item {
+            > span {
+                font-weight: @font-weight-400;
+                font-size: 2.6rem;
+            }
+        }
+        #checkout-shipping-method-load {
+            background-color: @green-100;
+            .table-checkout-shipping-method { 
+                width: 70%;
+            }
+        }
+        .block {
+            .title {
+               strong {
+                   font-weight: @font-weight-400 !important;
+                   font-size: 2.4rem !important; 
+               }
+           }
+           &-title {
+               strong {
+                   font-weight: @font-weight-400 !important;
+                   font-size: 2.4rem !important;
+               }
+           }
+        }
+        .shipping-information {
+            .shipping-information-title {
+                .action {
+                    &.action-edit {
+                        background-color: @black-color;
+                        height: auto;
+                        &:hover {
+                            &:after { 
+                                background-color: @gold-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .checkout-payment-method {
+            .payment-option-content {
+                .actions-toolbar {
+                    .action.action-apply {
+                        background-color: @black-color;
+                        min-width: 174px;
+                        &:hover {
+                            &:after { 
+                                background-color: @gold-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .discount-code {
+                .gift-card-apply {
+                    .fieldset.coupon {
+                        .action.action-apply {
+                            background-color: @black-color;
+                            &:hover {
+                                &:after { 
+                                    background-color: @gold-color;
+                                }
+                            }
+                        }
+                    }
+                    .action.secondary {
+                        background-color: @black-color;
+                        margin-bottom: 10px;
+                        &:hover {
+                            &:after { 
+                                background-color: @gold-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.payment-option-inline {
+    max-width: 100%;
+    display: flex;
+    width: 100%;
+    .payment-option-inner {
+        width: 100%;
+        padding-right: 20px;
+    }
+}
+ 

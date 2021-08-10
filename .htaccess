@@ -119,6 +119,18 @@
 
     Options +FollowSymLinks
     RewriteEngine on
+    RewriteCond %{REMOTE_ADDR} !^46\.7\.174\.61
+    RewriteCond %{REMOTE_ADDR} !^37\.228\.254\.244
+    RewriteCond %{REMOTE_ADDR} !^103\.8\.216\.140
+    RewriteCond %{REMOTE_ADDR} !^89\.204\.212\.212
+    RewriteCond %{REMOTE_ADDR} !^103\.249\.234\.202
+    RewriteCond %{REMOTE_ADDR} !^27\.54\.168\.186
+    RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+    RewriteCond %{DOCUMENT_ROOT}/maintenance.enable -f
+    RewriteCond %{SCRIPT_FILENAME} !maintenance.html
+    RewriteRule ^.*$ /maintenance.html [R=503,L]
+    ErrorDocument 503 /maintenance.html
+    Header Set Cache-Control "max-age=0, no-store"
 
 ############################################
 ## you can put here your magento root folder

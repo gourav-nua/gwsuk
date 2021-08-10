@@ -6,11 +6,25 @@
             .iblock {
                 padding-top: 25px;
                 padding-bottom: 25px;
+                justify-content: start;
+                text-align: left;
+                .icon-wrapper {
+                    min-width: 50px;
+                }
             }
         }
     }
     .header-banner-below {
         font-size: 14px;
+    }
+    .checkout {
+        &-container {
+            .opc-wrapper {
+                .step-title {
+                    font-size: 26px;
+                }
+            }
+        }
     }
 } 
 
@@ -22,6 +36,18 @@
                 max-width: 310px;
                 padding-left: 10px;
                 padding-right: 10px;
+            }
+        }
+    }
+    .payment-option-inline {
+        flex-direction: column;
+        .payment-option-inner {
+            padding-right: 0;
+        }
+        .actions-toolbar {
+            margin-top: 15px;
+            .action.action-apply {
+                min-width: 100% !important;
             }
         }
     }
