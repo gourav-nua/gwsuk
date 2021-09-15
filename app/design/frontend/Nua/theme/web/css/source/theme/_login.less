@@ -1,0 +1,37 @@
+.login-container {
+    .block-customer-login {
+        .actions-toolbar {
+            .secondary {
+                .action {
+                    &::after {
+                        background-color:transparent;
+                    }
+                    &:hover {
+                        color: @gold-color;
+                        &::after {
+                            background-color:transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.form {
+    &.password {
+        &.forget {
+            .actions-toolbar {
+                .secondary {
+                    .action {
+                        &:hover {
+                            color: @gold-color;
+                            &::after {
+                                background-color:@white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

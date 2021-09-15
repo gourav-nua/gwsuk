@@ -483,6 +483,153 @@
             <ignore>
                 <document>core_website</document>
             </ignore>
+
+            <!-- Ignore Custom Document -->
+            <ignore>
+                <document>aitoc_sufm_custom_attribute_description</document>
+            </ignore>
+            <ignore>
+                <document>aitoc_sufm_custom_attribute_need_select</document>
+            </ignore>
+            <ignore>
+                <document>aitoc_sufm_customer_entity_data</document>
+            </ignore>
+            <ignore>
+                <document>aitsys_news</document>
+            </ignore>
+            <ignore>
+                <document>aitsys_status</document>
+            </ignore>
+            <ignore>
+                <document>am_seo_sitemap</document>
+            </ignore>
+            <ignore>
+                <document>am_shiprules_attribute</document>
+            </ignore>
+            <ignore>
+                <document>am_shiprules_rule</document>
+            </ignore>
+            <ignore>
+                <document>amasty_regions_region</document>
+            </ignore>
+            <ignore>
+                <document>amasty_regions_region_country</document>
+            </ignore>
+            <ignore>
+                <document>banner7</document>
+            </ignore>
+            <ignore>
+                <document>brandslider</document>
+            </ignore>
+            <ignore>
+                <document>cryozonic_stripesubscriptions_customers</document>
+            </ignore>
+            <ignore>
+                <document>custommenu</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_channel</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_nominal_code</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_order</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_order_field</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_order_status</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_payment</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_price_list_item</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_shipment</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_shipping_method</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_status</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_stock_item</document>
+            </ignore>
+            <ignore>
+                <document>flint_brightpearl_warehouse</document>
+            </ignore>
+            <ignore>
+                <document>flint_interaction_log</document>
+            </ignore>
+            <ignore>
+                <document>mw_onestepcheckout</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review_autologin_key</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review_helpful_vote</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review_question</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review_question_option</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review_question_stat</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review_question_store</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review_reminder</document>
+            </ignore>
+            <ignore>
+                <document>pl_advanced_review_reminder_done</document>
+            </ignore>
+            <ignore>
+                <document>plugincompany_shipping_preset</document>
+            </ignore>
+            <ignore>
+                <document>plumbase_product</document>
+            </ignore>
+            <ignore>
+                <document>plumrocket_sociallogin_account</document>
+            </ignore>
+            <ignore>
+                <document>promotionalpopup</document>
+            </ignore>
+            <ignore>
+                <document>shipping_matrixrate</document>
+            </ignore>
+            <ignore>
+                <document>xtcore_config_data</document>
+            </ignore>
+            <ignore>
+                <document>xtento_productexport_destination</document>
+            </ignore>
+            <ignore>
+                <document>xtento_productexport_log</document>
+            </ignore>
+            <ignore>
+                <document>xtento_productexport_profile</document>
+            </ignore>
+            <ignore>
+                <document>xtento_productexport_profile_history</document>
+            </ignore>
+
+            <!-- End Ignore Custom Document -->
+
+
             <rename>
                 <document>catalogsearch_query</document>
                 <to>search_query</to>
@@ -623,6 +770,8 @@
                 <document>sales_billing_agreement_order</document>
                 <to>paypal_billing_agreement_order</to>
             </rename>
+
+            
         </document_rules>
         <field_rules>
             <move>
@@ -1348,6 +1497,63 @@
             <ignore>
                 <datatype>paypal_settlement_report.report_date</datatype>
             </ignore>
+
+            <!-- Ignore custom fields -->
+            <ignore>
+                <field>catalog_eav_attribute.aitoc_sufm_registration_page</field>
+            </ignore>
+            <ignore>
+                <field>catalog_eav_attribute.aitoc_sufm_registration_place</field>
+            </ignore>
+            <ignore>
+                <field>catalog_eav_attribute.aitoc_sufm_registration_position</field>
+            </ignore>
+
+            <ignore>
+                <field>adminnotification_inbox.is_amasty</field>
+            </ignore>
+            <ignore>
+                <field>adminnotification_inbox.expiration_date</field>
+            </ignore>
+            <ignore>
+                <field>adminnotification_inbox.image_url</field>
+            </ignore>
+
+            <ignore>
+                <field>sales_flat_order_item.gift_product_item_id</field>
+            </ignore>
+            <ignore>
+                <field>sales_flat_order_item.gift_product_qty_ordered</field>
+            </ignore>
+
+            <ignore>
+                <field>sales_flat_quote_item.fooman_auto_added_qty</field>
+            </ignore>
+            <ignore>
+                <field>sales_flat_quote_item.fooman_free_qty</field>
+            </ignore>
+            <ignore>
+                <field>sales_flat_quote_item.fooman_applied_rule_ids</field>
+            </ignore>
+            <ignore>
+                <field>sales_flat_quote_item.gift_product_item_id</field>
+            </ignore>
+            <ignore>
+                <field>sales_flat_quote_item.gift_product_qty_ordered</field>
+            </ignore>
+
+            <ignore>
+                <field>salesrule.fooman_discount_select</field>
+            </ignore>
+            <ignore>
+                <field>salesrule.fooman_discount_groupsize</field>
+            </ignore>
+            <ignore>
+                <field>salesrule.fooman_min_qty</field>
+            </ignore>
+
+
+            <!-- End Ignore custom fields -->
         </field_rules>
     </source>
     <destination>
@@ -1961,6 +2167,66 @@
             <ignore>
                 <document>queue_poison_pill</document>
             </ignore>
+
+            <!-- Ignore Custom Document -->
+            <ignore>
+                <document>magefan_blog_post</document>
+            </ignore>
+            <ignore>
+                <document>mageplaza_giftcard</document>
+            </ignore>
+            <ignore>
+                <document>mageplaza_giftcard_credit</document>
+            </ignore>
+            <ignore>
+                <document>mageplaza_giftcard_history</document>
+            </ignore>
+            <ignore>
+                <document>mageplaza_giftcard_pool</document>
+            </ignore>
+            <ignore>
+                <document>mageplaza_giftcard_template</document>
+            </ignore>
+            <ignore>
+                <document>mageplaza_giftcard_transaction</document>
+            </ignore>
+            <ignore>
+                <document>mst_core_urlrewrite</document>
+            </ignore>
+            <ignore>
+                <document>mst_related_analytics</document>
+            </ignore>
+            <ignore>
+                <document>mst_related_block</document>
+            </ignore>
+            <ignore>
+                <document>mst_related_index</document>
+            </ignore>
+            <ignore>
+                <document>mst_related_rule</document>
+            </ignore>
+            <ignore>
+                <document>olegnax_athlete2slideshow_slides</document>
+            </ignore>
+            <ignore>
+                <document>olegnax_bannerslider_group</document>
+            </ignore>
+            <ignore>
+                <document>olegnax_bannerslider_slides</document>
+            </ignore>
+            <ignore>
+                <document>olegnax_carousel_carousel</document>
+            </ignore>
+            <ignore>
+                <document>olegnax_carousel_slide</document>
+            </ignore>
+            <ignore>
+                <document>olegnax_googlemap_location</document>
+            </ignore>
+            <ignore>
+                <document>olegnax_instagrammin_intspost</document>
+            </ignore>
+            <!-- End of Custom Document -->
         </document_rules>
         <field_rules>
             <transform>
@@ -2293,6 +2559,83 @@
             <ignore>
                 <datatype>paypal_settlement_report.report_date</datatype>
             </ignore>
+
+            <!-- Ignore custom fields -->
+            <ignore>
+                <field>adminnotification_inbox.ox_content</field>
+            </ignore>
+            <ignore>
+                <field>adminnotification_inbox.ox_image</field>
+            </ignore>
+            <ignore>
+                <field>adminnotification_inbox.ox_validate</field>
+            </ignore>
+            <ignore>
+                <field>adminnotification_inbox.ox_type</field>
+            </ignore>
+            <ignore>
+                <field>adminnotification_inbox.date_expire</field>
+            </ignore>
+            <ignore>
+                <field>adminnotification_inbox.isOX</field>
+            </ignore>
+
+            <ignore>
+                <field>quote.gift_cards</field>
+            </ignore>
+            <ignore>
+                <field>quote.gc_credit</field>
+            </ignore>
+            <ignore>
+                <field>quote.mp_gift_cards</field>
+            </ignore>
+
+            <ignore>
+                <field>sales_creditmemo.base_gift_card_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_creditmemo.gift_card_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_creditmemo.base_gift_credit_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_creditmemo.gift_credit_amount</field>
+            </ignore>
+
+            <ignore>
+                <field>sales_invoice.base_gift_card_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_invoice.gift_card_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_invoice.base_gift_credit_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_invoice.gift_credit_amount</field>
+            </ignore>
+
+            <ignore>
+                <field>sales_order.gift_cards</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.base_gift_card_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.gift_card_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.base_gift_credit_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.gift_credit_amount</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.mp_gift_cards</field>
+            </ignore>
+
+            <!-- End of Custom Fields -->
         </field_rules>
     </destination>
 </map>

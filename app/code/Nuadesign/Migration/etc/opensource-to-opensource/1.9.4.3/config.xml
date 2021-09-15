@@ -42,11 +42,11 @@
             <data>Migration\Step\UrlRewrite\Version191to2000</data>
             <volume>Migration\Step\UrlRewrite\Version191to2000</volume>
         </step>
-        <step title="Log Step">
+        <!-- <step title="Log Step">
             <integrity>Migration\Step\Log\Integrity</integrity>
             <data>Migration\Step\Log\Data</data>
             <volume>Migration\Step\Log\Volume</volume>
-        </step>
+        </step> -->
         <step title="Ratings Step">
             <integrity>Migration\Step\Ratings\Integrity</integrity>
             <data>Migration\Step\Ratings\Data</data>
@@ -108,13 +108,13 @@
         </step>
     </steps>
     <source>
-        <database host="localhost" name="guinnes1_magento" user="siteproof-net" />
+        <database host="localhost" name="guinnes1_magento" user="siteproof-net" password="thisadmin"/>
     </source>
     <destination>
-        <database host="localhost" name="db_gwsuk" user="siteproof-net" />
+        <database host="localhost" name="db_gwsuk" user="siteproof-net" password="thisadmin"/>
     </destination>
     <options>
-        <map_file>etc/opensource-to-opensource/1.9.4.3/map.xml</map_file>
+        <map_file>app/code/Nuadesign/Migration/etc/opensource-to-opensource/1.9.4.3/map.xml</map_file>
         <eav_map_file>etc/opensource-to-opensource/map-eav.xml.dist</eav_map_file>
         <eav_document_groups_file>etc/opensource-to-opensource/eav-document-groups.xml.dist</eav_document_groups_file>
         <eav_attribute_groups_file>etc/opensource-to-opensource/eav-attribute-groups.xml.dist</eav_attribute_groups_file>
@@ -133,7 +133,7 @@
         <!--
         In case bulk_size=0 it will be auto-detected for every document.
         -->
-        <bulk_size>0</bulk_size>
+        <bulk_size>100</bulk_size>
         <!--
         Set direct_document_copy = 1 for better performance.
         NOTE: 'source' and 'destination' databases MUST be placed on the same MySQL instance

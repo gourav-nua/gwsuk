@@ -8,6 +8,11 @@
                 </arguments>
             </referenceBlock>
         </referenceBlock>
+        <referenceContainer name="content">
+          <container name="product.custom.description" label="Product Custom description" htmlTag="div" htmlClass="product-custom-description" after="product.info.details">
+              <block class="Magento\Catalog\Block\Product\View" name="extra" template="Magento_Catalog::product/view/customDescription.phtml" />
+          </container>        
+        </referenceContainer>
          <referenceContainer name="main.content">
           <block class="Magento\Cms\Block\Block" name="recently-view-products" after="-">
             <arguments>

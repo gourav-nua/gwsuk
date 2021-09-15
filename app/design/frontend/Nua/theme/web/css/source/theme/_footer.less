@@ -7,6 +7,16 @@
             font-family:@font-open-Sans; 
         }
     }
+    .row.centered-iblocks.-stretch{
+        justify-content: space-between;
+        padding: 15px;        
+        > div{
+            flex: inherit;
+            &:first-child{
+                padding-left: 0 ;
+            }
+        }
+    }
     .centered-iblocks {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -16,14 +26,95 @@
         }
     }  
 } 
+.page-footer {
+    .footer.content {
+        max-width: 1425px;
+    }
+}
+.copyright-footer{
+    .container{
+        max-width: 1425px;
+    }
+}
+.above_footer_block{
+    .container {
+        max-width: 1425px;
+    } 
+}
+.cms-noroute-index{
+    .huge-6vw{
+        img{
+            max-width: 700px;
+            width: 100%;
+        }
+    }
+}
 .copyright-container {
     border-top: 1px solid @dark-color;
-    padding-top: 20px;
+    padding: 40px 0;
+    .copyright{
+        span{
+            display: flex;
+            align-items: center;
+            img{
+                margin: 0 23px;
+            }
+        }
+    }
+    .copy-rights-content{ 
+        padding-left: 30px;  
+        ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                padding: 0 15px;
+            }
+        }
+        p{
+            text-align: left;
+            max-width: 625px;
+            padding-left: 16px;
+        }
+    }
 }
 .footer--layout-2 {
     .footer {
         &.content {
             .block.newsletter.newsletter-style--big {
+                &:before{
+                    background-image: url(../images/newslatter.png);
+                    background-position: center;
+                    border-bottom: 0;
+                }
+                .action.primary{
+                    font-family: 'Knockout';
+                    font-size: 25px;
+                    span{
+                        font-size: 24px;
+                        font-family: 'Knockout';
+                    }
+                }
+                .title{
+                    font-size: 43px;
+                    margin-bottom: 22px;
+                }
+                .block_newsletter_info{
+                    span{
+                        font-size: 13px;
+                        font-family: 'Open Sans';
+                    }
+                    .content{
+                        padding: 0;
+                        .form.subscribe{
+                            margin: 35px 0;
+                            .field.newsletter{
+                                flex: 0;
+                            }
+                        }
+                    }
+                }                
                 min-height: 250px;
                 .title {
                     margin-bottom: 10px; 
@@ -46,10 +137,14 @@
             }
             .footer-block-content {
                 padding: 0;
+                h4{
+                    font-size: 30px;
+                }
                 .call-us {
                     font-family:@font-open-Sans; 
                     color: #999999;
                     font-size: 18px;
+                    font-weight: 700;
                 } 
                 ul {
                     li {
@@ -70,5 +165,15 @@
         }
     }    
 }
-
- 
+.footer.content{
+    .footer-block-content{
+        .social-icons{
+            .athlete2-social-icons{
+                a{
+                    border-radius: 30px;
+                    margin: 0 20px 0 0 !important;
+                }
+            }
+        }
+    }
+}

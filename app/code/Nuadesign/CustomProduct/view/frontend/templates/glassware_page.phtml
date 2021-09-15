@@ -1,0 +1,17 @@
+<div class="container"> 
+<div class="row"> 
+	<?php $categories = $block->getGlasswareCategory();
+	foreach ($categories as $category): ?>
+    <div class="col-12 col-sm-4 a-center"> 
+        <div class="glassware-categories h-center v-center">
+            <a class="glassware-category-img" href="#">			
+               <img src="<?= $this->getUrl().$category->getImageUrl();?>" alt=""/>
+                <span class="glassware-category-details">
+                    <span class="glassware-cat-name"><?= $category->getName()?></span>
+                </span>	
+            </a>
+        </div>
+    </div>
+<?php endforeach; ?>
+</div>
+</div>

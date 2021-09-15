@@ -1,0 +1,26 @@
+<?php $_product = $block->getProduct(); ?>
+
+<?php if($_product->getCustomProductDescription() != ''):?>
+    <?php 
+	    echo $this->helper('Magento\Catalog\Helper\Output')->productAttribute($_product, $_product->getCustomProductDescription(), 'custom_product_description');
+    ?>
+<?php endif; ?>
+
+
+<script type="text/javascript">
+	require([
+        'jquery',
+        'jquery/ui'
+	],
+	function ($) {
+        $('#video-placeholder').click(function(){
+            $('#video-placeholder').css('display','none');
+            $('#bgvideo').css('display','block');
+            var oldSrc = $('#bgvideo').attr("src");
+            var newSrc = oldSrc.replace("?enablejsapi=1", "");
+              
+            $("#bgvideo").attr("src", newSrc);
+            $("#bgvideo")[0].src += "?autoplay=1"; 
+        });
+    });
+</script>

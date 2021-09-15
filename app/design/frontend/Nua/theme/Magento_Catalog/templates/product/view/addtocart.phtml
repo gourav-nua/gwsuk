@@ -1,0 +1,68 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php $_product = $block->getProduct(); ?>
+
+<?php if($_product->getAddGiftBox()): ?>
+  <?php
+    $blockObj= $block->getLayout()->createBlock('Nuadesign\CustomProduct\Block\GravityGift');
+    $productObj = $blockObj->getProductBySku('GRAVITY-BOX');
+    $finalPrice = $productObj->getPriceInfo()->getPrice('final_price')->getAmount()->getValue();
+    $price = $this->helper('Magento\Framework\Pricing\Helper\Data')->currency(number_format($finalPrice,2), true , false);
+  ?>
+    
+    <div class="input-box">
+        <ul id="options-299-list" class="options-list">
+            <li>
+                <input type="hidden" class="giftproduct-qty" name="giftproductqty" value="1"/>
+                <input type="checkbox" class="checkbox product-custom-option focusAttached" name="giftproduct" id="product_id_<?php echo $productObj->getId(); ?>" value="<?php echo $productObj->getId(); ?>" price=""><span class="label">
+                <label for="product_id_<?php echo $productObj->getId(); ?>"><?php echo __('Add gift box') ?><span class="price-notice">+<span class="price"><?php echo $price ?></span></span></label></span>
+            </li>
+        </ul>
+    </div>
+<?php endif; ?>
+
+<?php $buttonTitle = __('Add to Cart'); ?>
+<?php if ($_product->isSaleable()) :?>
+<div class="box-tocart">
+    <div class="fieldset">
+        <?php if ($block->shouldRenderQuantity()) :?>
+        <div class="field qty">
+            <label class="label" for="qty"><span><?= $block->escapeHtml(__('Qty')) ?></span></label>
+            <div class="control">
+                <input type="number"
+                       name="qty"
+                       id="qty"
+                       min="0"
+                       value="<?= $block->getProductDefaultQty() * 1 ?>"
+                       title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
+                       class="input-text qty"
+                       data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
+                       />
+            </div>
+        </div>
+        <?php endif; ?>
+        <div class="actions">
+            <button type="submit"
+                    title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"
+                    class="action primary tocart"
+                    id="product-addtocart-button" disabled>
+                <span><?= $block->escapeHtml($buttonTitle) ?></span>
+            </button>
+            <?= $block->getChildHtml('', true) ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }
+</script>

@@ -1,0 +1,81 @@
+
+
+.category-guinness-clothing-accessories{
+	.text_inshorting {
+	    margin-bottom: 50px;
+	}
+	.imagemain{
+	    position: relative;
+	    &:hover{
+	    	.main_stert{
+	    		opacity: 1;
+	    	}
+	    }
+	    img{
+	    	opacity: 1;
+		    display: block;
+		    width: 100%;
+		    height: auto;
+		    transition: .5s ease;
+		    backface-visibility: hidden;
+	    }
+	    .main_stert {
+		      position: absolute;
+			  top: 0;
+			  bottom: 0;
+			  left: 0;
+			  right: 0;
+			  height: 100%;
+			  width: 100%;
+			  opacity: 0;
+			  transition: .5s ease;
+			  background-color: #bc966c87;
+			.main_btn {
+			    font-size: 36px;
+			    position: absolute;
+			 	top: 50%;
+			  	left: 50%;
+			  	-webkit-transform: translate(-50%, -50%);
+			  	-ms-transform: translate(-50%, -50%);
+			  	transform: translate(-50%, -50%);
+			  	text-align: center;
+			    text-transform: uppercase;
+			    color: @white-color;
+			    padding: 0px 54px;
+			    border: 1px solid @white-color;
+			    font-family: @font-knockout;
+			}
+		}
+	}
+	.main_title{
+		h2 {
+		    font-size: 36px;
+		    padding-top: 20px;
+		    color: #000;
+		}
+	}
+}
+.switcher-options{
+	#switcher-currency-trigger{
+		strong {
+			display: flex;
+	    	align-items: center;
+	    	span{
+	    		color: @white-color;
+	    		padding-left: 15px;
+	    	}
+		}
+	}
+	.dropdown.switcher-dropdown{
+		    padding: 9px;
+		    .switcher-option{
+		    	a{
+		    		display: flex !important;
+    				align-items: center;
+    				span {
+					    padding-left: 15px;
+					}
+		    	}
+		    }
+	}
+}
