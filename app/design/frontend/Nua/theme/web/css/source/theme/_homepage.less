@@ -7,6 +7,7 @@
 			h6{
 				font-size: 36px;
 				margin-top: 10px;
+				max-width: 350px;
 				color: #fff;
 			}
 		}
@@ -20,19 +21,28 @@
 				a{
 					font-size: 18px;
 					color: #fff;
-					font-family: 'Open Sans';
-    				font-weight: 600;
+					font-family: 'Gotham Book';
+    				font-weight: 600; 
+				}
+				a.button-custom{
+					font-size: 24px;
 				}
 				a.button.naked.long.h6.primary{
 					span{
 						color:#000;
-						font-family: 'Knockout';
-    					font-size: 25px;
+						font-family: 'knockouts';
+    					font-size: 33px;
     					font-weight: 400;
+    					padding: 10px 20px;
 					}
 					&:hover{
 						span{
-							color:#fff;
+							color:#000;
+							 background: #fff;
+							&:after{
+								background: transparent;
+								transform: scaleX(0);
+							}
 						}
 						&:after{
 							background: transparent;
@@ -43,11 +53,20 @@
 			}
 		}
 		.title{
-			font-size: 60px;
+			font-size: 48px;
 			color: #fff;
 		}
 	}
 }
+.form.check-code{
+	.field.check-code-field{
+		.control{
+			&:before{
+				line-height: 39px;
+			}
+		}
+	}
+}  
 .glassware-categories{
     padding: 0 35px;
     margin: 100px 0;
@@ -84,7 +103,7 @@
 			        margin: 0;
 			        line-height: 65px;
 			    	a{
-			    		font-size: 60px;
+			    		font-size: 48px;
 					    color: @white-color;
 					    font-family: @font-knockout;
 					    text-transform: uppercase;
@@ -94,7 +113,7 @@
 			   		font-size: 16px;
 				    color: #ffffff;
 				    margin-bottom: 25px;
-				    font-family: 'Open Sans';
+				    font-family: 'Gotham Book';
 				    text-transform: uppercase;
 				    line-height: 34px;
 				    max-width: 701px;
@@ -103,9 +122,15 @@
 			    .hightlighted-text.shop-all {
 				    background:@gold-color;
 				    padding: 12px 20px;
-				    font-size: 30px;
-				    font-family: @font-knockout;
+				    font-size: 24px;
+				    font-family: 'knockouts';
 				    text-transform: uppercase;
+				    &:hover{
+				    	background: #fff;
+				    	&:brfore{
+					    	background: #fff;
+					    }
+				    }
 				}
 			}
 		}
@@ -146,7 +171,7 @@
 	    display: flex;
 	    align-items: center;
 	    h6{
-	    	font-size: 60px;
+	    	font-size: 48px;
     		margin: 15px 25px 30px 0;
 	    }
 	    a {
@@ -160,19 +185,31 @@
 		.clothing-category-details{
 			span{
 				font-size: 36px;
-				font-family: 'Knockout';
+				font-family: 'Knockout', Helvetica, Arial, sans-serif;
     			text-transform: uppercase;
 			}
 		}
 	}
 }
+.product-items {
+	.product-item {
+		.price-box {
+			.price-container {
+				.price {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
 .trending-categories-section {
-    margin: 25px 47px 100px;
+    margin: 25px 47px 45px;
     .trending-title {
 	    display: flex;
 	    align-items: center;
 	    h6{
-	    	font-size: 60px;
+	    	font-size: 48px;
 	    	margin: 0 20px 0 0;
 	    }
 	    a {
@@ -180,6 +217,9 @@
 		    text-transform: uppercase;
 		    text-decoration: underline;
 		}
+	}
+	.product-item-details {
+		margin-top: 50px;
 	}
 }
 .personalised-carousel {
@@ -189,10 +229,11 @@
 	    	img{
 	    		height: 500px;
     			width: 500px;
+    			margin: 0 auto;
 	    	}
 	    }
 	    h6 {
-		    font-size: 60px;
+		    font-size: 48px;
 		}
 		h2{
 			font-size: 18px;
@@ -208,15 +249,16 @@
 	    }
 	    &:after{
 	    	position: absolute;
-		    bottom: 25px;
+		    bottom: 0;
 		    content: '';
 		    left: 0;
 		    height: 100%;
-    		width: 100%;
+		    width: 100%;
 		    right: 0;
 		    background-image: url(../images/glassware-bg.png);
 		    background-repeat: no-repeat;
-		    background-size: cover;
+		    background-size: contain;
+		    background-position: bottom;
 		    z-index: -1;
 	    }
 	}
@@ -243,9 +285,10 @@
     		margin-top: -15px;
 			span.button.secondary.medium.ox-show-hover.ox-moveup-hover {			    
 			    color: #000;
-			    font-family: 'Knockout';
-			    font-size: 27px;
+			    font-family: 'Knockout', Helvetica, Arial, sans-serif;
+			    font-size: 30px;
 			    font-weight: 400;
+			    padding:10px 20px ;
 			}
 			&:hover{
 				span.button.secondary.medium.ox-show-hover.ox-moveup-hover {
@@ -290,7 +333,7 @@
 		    bottom: 0;
 		    text-align: left;
 		    h6 {
-			    font-size: 60px;
+			    font-size: 48px;
 			    color: #fff;
 			}
 			p{
@@ -299,10 +342,16 @@
 			}
 			a.hightlighted-text.shop-all {
 			    background: #b8955f;
-			    padding: 10px 30px;
-			    font-size: 30px;
-			    font-family: 'Knockout';
+			    padding: 10px 20px;
+			    font-size: 24px;
+			    font-family: 'Knockout', Helvetica, Arial, sans-serif;
 			    text-transform: uppercase;
+			    &:hover{
+			    	background: #fff;
+				    &:brfore{
+				    	background: #fff;
+				    }
+			    }			    
 			}
 		}		
 	}
@@ -316,7 +365,7 @@
 		    bottom: 0;
 		    text-align: center;
 		    h6 {
-			    font-size: 60px;
+			    font-size: 48px;
 			    color: #fff;
 			}
 			p{
@@ -325,10 +374,17 @@
 			}
 			a.hightlighted-text.shop-all {
 			    background: #b8955f;
-			    padding: 10px 30px;
-			    font-size: 30px;
-			    font-family: 'Knockout';
+			    padding: 10px 20px;
+			    font-size: 24px;
+			    font-family: 'Knockout', Helvetica, Arial, sans-serif;
 			    text-transform: uppercase;
+			     &:hover{
+			    	background: #fff;
+			    	&:brfore{
+				    	background: #fff;
+				    }
+			    }
+			   
 			}
 		}
 	}
@@ -354,7 +410,7 @@
 	}
 }    
 .home-page-banner {
-    padding: 50px 47px;
+    padding: 50px 47px 0;
     .main-banner-.section {
     	img{
     		width: 100%;
@@ -381,27 +437,141 @@
 			    color: #fff;
 			}
 			p {
-			    font-size: 24px;
+			    font-size: 22px;
 			    color: #fff;
 			    text-transform: uppercase;
-			    font-family: 'Open Sans';
+			    font-family: 'Gotham Book';
 			    font-weight: 600;
 			    line-height: 58px;
 			}
 			a.button.naked.long.h6.primary {
 			    padding: 0;
 			    &:hover{
+			    	background: #fff;
 			    	span{
-			    		color: #fff;
+			    		color: #000;
+			    		background: #fff;
+			    		&:after{
+				    		background: #fff;
+				    		transform: scaleX(0);
+				    	}
+			    	}
+			    	&:after{
+			    		background: #fff;
 			    	}
 			    }
 			    span{
 			    	color: #000;
 			    	font-weight: 400;
-				    font-family: 'Knockout';
-				    font-size: 25px;
+				    font-family: 'Knockout', Helvetica, Arial, sans-serif;
+				    font-size: 30px;
+				    padding: 10px 20px;
 			    }
 			}
 		}
 	}
+}
+
+.button-custom{
+	background: #b8955f;
+    padding: 10px 20px;
+    font-size: 24px !important;
+    display: inline-block;
+    position: relative;
+    line-height: 1em;
+    z-index: 99;
+    span{    	
+	    font-weight: 400;
+	    color: #000;
+	    font-family: 'Knockout', Helvetica, Arial, sans-serif;
+	    text-transform: uppercase;
+    }
+    &:hover{
+    	background: #fff;
+    	color:#000;
+    }
+    &:after{
+    	display:none;
+    }
+}
+.btn-actrions{
+	    background: #b8955f;
+	    padding: 10px 20px;
+	    font-size: 24px;
+	    text-transform: uppercase;
+	    display: inline-block;
+	    position: relative;
+	    line-height: 1em;
+	    font-family: 'Knockout';
+	    z-index: 99;
+    span{
+	    font-weight: 400;
+	    color: #000;
+	    font-family: 'Knockout', Helvetica, Arial, sans-serif;
+	    text-transform: uppercase;
+    }
+    &:hover{
+    	background: #000;
+    	color: #fff;
+    	span{
+    		color: #fff;
+    	}
+    }
+}
+.cart-container{
+	.form-cart{
+		.action.update{
+			&:before{
+				display: none;
+			}
+		}
+	}
+} 
+button.button-custom {
+    font-size: 24px;
+    color: #000;
+    display: inline-block;
+    position: relative;
+    line-height: 1em;
+    z-index: 99;
+    &:hover{
+    	background-color: #ffffff;
+    	color: #000;
+    }
+    &:afetr{
+    	background-color: #ffffff;
+    	display: none;
+    }
+}
+#ox_carousel_0ee9e{
+	.ox-slide-item{
+		height: auto;
+	}
+} 
+.product-item-details{
+	strong.product-item-name {
+	    margin-bottom: 20px;
+	}	
+} 
+p{
+	font-family: 'Gotham Book';
+}
+
+h1,h2,h3,h4,h5,h6{
+	letter-spacing: 0.064em !important;
+}
+
+
+.minicart--style-modern{
+	.block-minicart{
+		.ox-overlay-close-btn{
+			top: 0;
+		}
+	}
+}  
+.checkout-container .opc-progress-bar-item > span{
+	padding-bottom: 15px;
+}
+a.action.remind:after {
+    display: none;
 }

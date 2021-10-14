@@ -119,10 +119,20 @@ define([
                 items : 4,
                 nav: true,
                 navText : ['<span></span>','<span></span>'],
-                itemsDesktop : [1199,5],
-                itemsDesktopSmall : [900,4], // betweem 900px and 601px
-                itemsTablet: [700,2], // 2 items between 600 and 480
-                itemsMobile : [479,1] , // 1 item between 479 and 0
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    640: {
+                        items: 2
+                    },
+                    1025: {
+                        items: 3
+                    },
+                    1160: {
+                        items: 4
+                    }
+                }
             });
         }
     });

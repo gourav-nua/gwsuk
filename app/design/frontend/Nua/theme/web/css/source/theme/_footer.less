@@ -26,6 +26,14 @@
         }
     }  
 } 
+.wishlist-index-index{
+    a.product-item-link {
+        min-height: 48px;
+    }
+}
+.account .column.main .actions-toolbar .primary .action.primary{
+    font-size: 24px !important;
+}
 .page-footer {
     .footer.content {
         max-width: 1425px;
@@ -51,7 +59,7 @@
 }
 .copyright-container {
     border-top: 1px solid @dark-color;
-    padding: 40px 0;
+    padding: 20px 0 0; 
     .copyright{
         span{
             display: flex;
@@ -74,8 +82,10 @@
         }
         p{
             text-align: left;
-            max-width: 625px;
+            max-width: 663px;
             padding-left: 16px;
+            margin-bottom: 0;
+            margin-top: 20px;
         }
     }
 }
@@ -89,11 +99,12 @@
                     border-bottom: 0;
                 }
                 .action.primary{
-                    font-family: 'Knockout';
-                    font-size: 25px;
+                    font-family: 'Knockout', Helvetica, Arial, sans-serif;
+                    font-size: 30px;
+                    padding:10px 20px;
                     span{
-                        font-size: 24px;
-                        font-family: 'Knockout';
+                        font-size: 30px;
+                        font-family: 'Knockout', Helvetica, Arial, sans-serif;
                     }
                 }
                 .title{
@@ -102,8 +113,8 @@
                 }
                 .block_newsletter_info{
                     span{
-                        font-size: 13px;
-                        font-family: 'Open Sans';
+                        font-size: 16px;
+                        font-family: 'Gotham Book';
                     }
                     .content{
                         padding: 0;
@@ -121,11 +132,12 @@
                     font-weight: 500;
                 }
                 .label {
-                    max-width: 300px; 
+                    max-width: 400px; 
+                    width: 100%;
                 }
-                .control {
+                .control { 
                     &:before {
-                        display: none;
+                        display: none; 
                     } 
                     input {
                         padding-left: 10px;
@@ -139,6 +151,7 @@
                 padding: 0;
                 h4{
                     font-size: 30px;
+                    margin-top: 35px;
                 }
                 .call-us {
                     font-family:@font-open-Sans; 

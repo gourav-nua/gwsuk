@@ -6,23 +6,109 @@
     margin-bottom: 100px;
     img{
     	display: block;
+    	width: 100%;
     }
     .converter_contant {
 	    position: absolute;
 	    top: 23%;
-	    left: 5%;
+	    left: 2%;
 	    right: 0;
 	    h2{
-	    	font-size: 100px;
+	    	font-size: 88px;
     		color: @white-color;
 	    }
 	    p{
 	    	font-size: 24px;
     		color: @white-color;
     		font-weight: 600;
+    		line-height: 36px;
     		text-transform: uppercase;
 	    }
 	}
+}
+li#shipping .step-title {
+    font-size: 48px;
+}
+.breadcrumbs .item a:not(:hover) {
+    color: #888;
+}
+.opc-block-summary > .title {
+    font-size: 48px !important;
+}
+.breadcrumbs .item strong {
+    font-weight: normal;
+    color: #333;
+}
+.js-toolbar-dropdown{
+	min-width: auto;
+	width: 145px !important;
+}
+.toolbar-sorter.sorter{
+	div#sorter {
+	    width: 133px !important;
+	}
+}
+.field-error, div.mage-error[generated]{
+	background: transparent;
+    display: inline-block;
+    padding: 4px 7px 4px;
+    color: #f00;
+}
+.sidebar-additional{
+	.block.blog-search{
+		.block-content{
+			.actions button{
+				width: 50px;
+    			height: 60px;
+			}
+		}
+	}
+}  
+a.action.compare.primary {
+    margin-bottom: 10px;
+}
+.products-grid.wishlist + .actions-toolbar .action {
+    margin-bottom: 5px;
+    padding: 10px 20px;
+}
+.actions{
+	button.action.primary{
+		padding: 10px 20px !important;
+	}
+}
+button#update-cart-item-57623 {
+    font-size: 18px;
+}
+.sidebar{
+	 .product-items{
+	 	.actions-secondary {
+	 		right: 7px;
+			left: auto;
+	 	}
+	 	.action.tocart{
+	 		padding: 6px 8px !important;
+	 		span{
+	 			line-height: 32px;
+	 		}
+	 	}
+	 }
+	  
+} 
+#ox_carousel_e5c4e, #ox_carousel_e5c4e .ox-slide-item{
+	    height: auto;
+}
+.cart-container .checkout-methods-items .item + .item {
+    margin-top: 0;
+}
+.form.create.account{
+	.actions-toolbar{
+		>.secondary .action{
+			padding: 10px 20px
+		}
+	}
+}  
+input.input-text {
+    height: 55px;
 }
 .product-info-main  {
 	.box-tocart{
@@ -75,6 +161,10 @@
     }
 
 .home-bar{
+	.ox-megamenu-block.ox-megamenu-block-right.ox-menu-col.ox-menu-col-4{
+		max-width: 700px;
+    	flex: 0 0 700px;
+	}
 	.ox-megamenu__categories {
 		flex-grow: 0.5;
 		.ox-megamenu-list{
@@ -117,16 +207,17 @@
 		     text-align: center;
 		     right: 0; 
 		     h2 {
-			    font-family: 'Knockout';
+			    font-family: 'Knockout', Helvetica, Arial, sans-serif;
 			    color: #fff;
 			    text-align: center;
+			    font-size: 2.4rem;
 			}
 			.costam_btn {
 			    background: #b8955f;
 			    padding: 7px 40px;
-			    font-family: 'Knockout';
+			    font-family: 'Knockout', Helvetica, Arial, sans-serif;
 			    cursor: pointer;
-			    font-size: 27px;
+			    font-size: 24px;
 			    text-transform: uppercase;
 			    span{
 			    	&:after{
@@ -141,8 +232,14 @@
 	.ox-menu-col{
 		flex-grow: 0.5;
 	}
+	.ox-megamenu-block.ox-megamenu-block-right.ox-menu-col.ox-menu-col-6 {
+	    flex: 0 0 100%;
+	    max-width: 57%;
+	}
 }
-
+.box.box-information.col-mp.mp-6.mp-xs-12 {
+    padding: 0;
+}
 .category-guinness-at-home{
 	.block-title.title-h3{
 	    position: relative;
@@ -154,7 +251,7 @@
 	    &:after{
 	        content: '';
 	        background: @graty-color;
-	        width: 300px;
+	        width: 170px;
 	        height: 2px;
 	        position: absolute;
 	        margin: 0 auto;
@@ -168,7 +265,7 @@
 	    &:before{
 	        content: '';
 	        background: @graty-color;
-	        width: 280px;
+	        width: 140px;
 	        height: 2px;
 	        position: absolute;
 	        margin: 0 auto;
@@ -208,7 +305,30 @@
 		}
 	}
 }
+ button.action.secondary{    
+    padding: 10px 20px;
+    span {
+        font-size: 24px;
+    }
+}
+.cart-container{
+	.checkout-methods-items{
+		.action.primary{
+			&:hover{
+				&:after{
+					background: #fff;
+				}
+				span{
+					color: #000;
+				}
+			}
+		}
+	}	
+}  
 .category-official-guinness-glassware {
+	.container {
+	    padding: 0;
+	}
 	.block-align-vertical{
 		position: relative;
 		display: block;
@@ -235,7 +355,7 @@
 			        margin: 0;
 			        line-height: 65px;
 			    	a{
-			    		font-size: 60px;
+			    		font-size: 48px;
 					    color: @white-color;
 					    font-family: @font-knockout;
 					    text-transform: uppercase;
@@ -252,9 +372,18 @@
 			    .hightlighted-text.shop-all {
 				    background:@gold-color;
 				    padding: 12px 20px;
-				    font-size: 30px;
+				    font-size: 24px;
 				    font-family: @font-knockout;
 				    text-transform: uppercase;
+				    &:brfore{
+				    	background: transparent;
+				    }
+				    &:hover{
+				    	background: #fff;
+				    	&:brfore{
+					    	background: #fff;
+					    }
+				    }
 				}
 			}
 		}
@@ -280,6 +409,7 @@
 			span{
 				text-align: left;
 			    font-size: 36px;
+			    text-transform: uppercase;
 			    margin-top: 6px;
 			    font-family: @font-knockout;
 			    display: block;
@@ -291,6 +421,14 @@
 		    margin-bottom: 50px !important;
 		}
 	} 
+}
+.product-e-gift-card{
+	.athlete2_product__bottom {
+	    display: none;
+	}
+	.block-viewed-products-grid{
+		display: none;
+	}
 }
 .above_footer_block{
 	.iblock{
@@ -307,12 +445,18 @@
 }
 .secondary{
 	 .action.viewcart{
-	 	font-family: 'Knockout';
+	 	font-family: 'Knockout', Helvetica, Arial, sans-serif;
+	 	span{
+	 		display:block;
+	 	}
 	 }
 }
 .primary{
 	.action.primary.checkout{
-		font-family: 'Knockout';
+		font-family: 'Knockout', Helvetica, Arial, sans-serif;
+		span{
+	 		display:block;
+	 	}
 	}
 }
 .ox-banner-maintors {
@@ -322,12 +466,75 @@
 	    bottom: 0;
 	    text-align: left;
 	    left: 5%;
-	    max-width: 459px;
+	    max-width: 600px;
 	    width: 100%;
-	    font-family: 'Knockout';
+	    font-family: 'Knockout', Helvetica, Arial, sans-serif;
 	    font-size: 48px;
 	    line-height: 47px;
 	    color: #ffffff;
 	    text-transform: uppercase;
     }
+}
+
+.product-guinnessr-images{
+	.col-custom{
+	    margin: 35px;
+		img{
+			margin: 28px 0;
+			border: 1px solid #b9965b;
+		}
+	}
+}
+.presentation-box {
+    display: block;
+    float: left;
+    width: 100%;
+    .presentation-box-section {
+	    display: flex;
+	    align-items: center;
+	    background: #b9965b;
+	    .presentation-box-img{
+	        width: 50%;
+	    	img{
+	    		float: left;
+	    	}
+	    }
+	    .presentation-box-text {
+		    padding: 0 40px;
+		    .presentation-box-center{
+		    	 h4 {
+				    font-size: 36px;
+				    color: #fff;
+				}
+				p{
+					font-size: 16px;
+				    max-width: 435px;
+				    color: #fff;
+				}
+		    }
+		}
+	}
+}
+a.hightlighted-text.shop-all:before {
+    display: none;
+}
+button.action.tocart.primary {
+    padding: 14px !important;
+}
+
+.giftcard-template-container{
+	.giftcard-template-setting{
+		.giftcard-template-setting-content{
+			.giftcard-template-choose-images{
+				margin: 11px 0;
+			}
+		}
+	}
+}   
+
+
+form#check-code-form{
+	button.action.action-check.primary {
+	    padding: 7px 20px !important;
+	}	
 }

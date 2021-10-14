@@ -2888,7 +2888,8 @@
             "flex",
             "keyword",
             "library"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "hoa/console",
@@ -2966,7 +2967,8 @@
             "terminfo",
             "tput",
             "window"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "hoa/event",
@@ -3024,7 +3026,8 @@
             "library",
             "listener",
             "observer"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "hoa/exception",
@@ -3080,7 +3083,8 @@
         "keywords": [
             "exception",
             "library"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "hoa/file",
@@ -3144,7 +3148,8 @@
             "library",
             "link",
             "temporary"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "hoa/iterator",
@@ -3200,7 +3205,8 @@
         "keywords": [
             "iterator",
             "library"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "hoa/protocol",
@@ -3262,7 +3268,8 @@
             "resource",
             "stream",
             "wrapper"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "hoa/stream",
@@ -3328,7 +3335,8 @@
             "protocol",
             "stream",
             "wrapper"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "hoa/ustring",
@@ -3390,7 +3398,8 @@
             "search",
             "string",
             "unicode"
-        ]
+        ],
+        "abandoned": true
     },
     {
         "name": "jms/metadata",
@@ -19950,8 +19959,7 @@
             }
         ],
         "description": "Provides a list of PHP built-in functions that operate on resources",
-        "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
-        "abandoned": true
+        "homepage": "https://www.github.com/sebastianbergmann/resource-operations"
     },
     {
         "name": "sebastian/type",
@@ -20267,6 +20275,110 @@
         "keywords": [
             "phpcs",
             "standards"
+        ]
+    },
+    {
+        "name": "stripe/module-payments",
+        "version": "2.7.4",
+        "version_normalized": "2.7.4.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://repo.magento.com/archives/stripe/module-payments/stripe-module-payments-2.7.4.0.zip",
+            "shasum": "39d9fcfc747cfeaeb8bf7465ce33d879e5894bf9"
+        },
+        "require": {
+            "stripe/stripe-php": "^7.33.0"
+        },
+        "type": "magento2-module",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "registration.php"
+            ],
+            "psr-4": {
+                "StripeIntegration\\Payments\\": ""
+            }
+        },
+        "license": [
+            "https://stripe.com/magento/legal"
+        ],
+        "description": "Shared component for accepting online payments in Magento 2 using the Stripe payment gateway."
+    },
+    {
+        "name": "stripe/stripe-payments",
+        "version": "2.7.4",
+        "version_normalized": "2.7.4.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://repo.magento.com/archives/stripe/stripe-payments/stripe-stripe-payments-2.7.4.0.zip",
+            "shasum": "a79f7cf0db151eedc6162556d49bef85f8eaaf78"
+        },
+        "require": {
+            "stripe/module-payments": "2.7.4"
+        },
+        "type": "metapackage",
+        "license": [
+            "https://stripe.com/magento/legal"
+        ],
+        "description": "Accept online payments in Magento 2 using the Stripe payment gateway."
+    },
+    {
+        "name": "stripe/stripe-php",
+        "version": "v7.97.0",
+        "version_normalized": "7.97.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/stripe/stripe-php.git",
+            "reference": "ae41c309ce113362706f8d5f19cf0cf2c730bc4a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/stripe/stripe-php/zipball/ae41c309ce113362706f8d5f19cf0cf2c730bc4a",
+            "reference": "ae41c309ce113362706f8d5f19cf0cf2c730bc4a",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "ext-mbstring": "*",
+            "php": ">=5.6.0"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "2.17.1",
+            "php-coveralls/php-coveralls": "^2.1",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "^3.3",
+            "symfony/process": "~3.4"
+        },
+        "time": "2021-09-16T21:28:33+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Stripe\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Stripe and contributors",
+                "homepage": "https://github.com/stripe/stripe-php/contributors"
+            }
+        ],
+        "description": "Stripe PHP Library",
+        "homepage": "https://stripe.com/",
+        "keywords": [
+            "api",
+            "payment processing",
+            "stripe"
         ]
     },
     {

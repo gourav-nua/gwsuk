@@ -25,6 +25,8 @@
                     }
                     svg {
                         margin-right: 0;
+                        width: 18px;
+                        height: 18px;
                     }
                 }
             }
@@ -33,7 +35,7 @@
                     .level0{
                         &.active{
                             a{ 
-                                span{
+                                span.name {
                                     &:after{
                                         border-bottom: 2px solid #b8955f;
                                         transform-origin: left center;
@@ -48,7 +50,7 @@
                             }
                         }
                         a{ 
-                          span{
+                          span.name {
                                 &:after{
                                     position: absolute;
                                     content: "";
@@ -109,6 +111,16 @@
                 }
             }
         } 
+        .action-search-slideout {
+            svg {
+                width: 18px;
+            }
+        }
+        .header__item-account {
+            .athlete2-icon-login {
+                font-size: 18px;
+            }
+        }
     } 
 } 
 .ox-megamenu__dropdown{
@@ -182,6 +194,7 @@ nav.ox-megamenu{
             .form{
                 input{
                    font-size: 25px;
+                   border: 3px solid #b8955f;
                 }
                 .label{
                     font-size: 25px;
@@ -198,6 +211,67 @@ nav.ox-megamenu{
                     }
                 }
             } 
+        }
+    }
+}
+
+.modal__left{
+    .ox-megamenu-navigation{
+        .category-item.has-active{
+            > .level-top{
+                background: transparent;
+                &:before{
+                   background: transparent; 
+                }
+                span.name {
+                    &:before{
+                        position: absolute;
+                        content: "";
+                        bottom: -8px;
+                        left: 0;
+                        width: 100%;
+                        transform-origin: left center;
+                        border-bottom: 2px solid #b8955f;
+                        transition: transform .3s,opacity .3s;
+                    }
+                }
+            }
+        }
+    } 
+}
+.checkout-index-index{
+    .counter-number {
+        background: #b8955f;
+        padding: 4px;
+    }
+}
+.clothing-accessories{
+    .ox-megamenu__dropdown{
+        .ox-megamenu-list{
+            li{
+                a{
+                    .name{
+                        &:after{
+                          display:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.home-bar{
+    .ox-megamenu__dropdown{
+        .ox-megamenu-list{
+            li{
+                a{
+                    .name{
+                        &:after{
+                          display:none;
+                        }
+                    }
+                }
+            }
         }
     }
 }

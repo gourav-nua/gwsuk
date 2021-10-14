@@ -276,10 +276,12 @@ return [
         'Olegnax_Quickview' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
+        'StripeIntegration_Payments' => 1,
         'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidationApi' => 1,
         'Vertex_AddressValidation' => 1,
+        'WebShopApps_MatrixRate' => 1,
         'Yotpo_Yotpo' => 1
     ]
 ];

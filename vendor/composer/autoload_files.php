@@ -414,6 +414,7 @@ return array(
     '6b5b87bda6fedcf6ef8605219c8b67f2' => $vendorDir . '/mageplaza/module-core/registration.php',
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     '7adedf5aab7954091befcc50d50f5120' => $vendorDir . '/paypal/module-braintree-graph-ql/registration.php',
+    '6afbb3ece6b14bcedd88522ddc6978f5' => $vendorDir . '/stripe/module-payments/registration.php',
     '21e1f66f21c1487486dda2a7c9174cf0' => $vendorDir . '/magefan/module-blog/registration.php',
     '43a898c2b52882ecca1f7b0558d3af2c' => $vendorDir . '/magento/composer-root-update-plugin/registration.php',
     '0675d4e4a5ec2bff513f44d595f3b063' => $vendorDir . '/magento/data-migration-tool/src/Migration/cli_commands.php',

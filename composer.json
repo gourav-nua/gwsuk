@@ -19,6 +19,7 @@
         "magepal/magento2-gmailsmtpapp": "^2.8",
         "mageplaza/module-core": "^1.4",
         "mageplaza/module-smtp": "^4.5",
+        "stripe/stripe-payments": "2.7.4",
         "yireo/magento2-replace-inventory": "^4.2"
     },
     "autoload": {

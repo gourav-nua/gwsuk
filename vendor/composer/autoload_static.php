@@ -415,6 +415,7 @@ class ComposerStaticInit4a2e6a61a39436dc6250c06320256192
         '6b5b87bda6fedcf6ef8605219c8b67f2' => __DIR__ . '/..' . '/mageplaza/module-core/registration.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '7adedf5aab7954091befcc50d50f5120' => __DIR__ . '/..' . '/paypal/module-braintree-graph-ql/registration.php',
+        '6afbb3ece6b14bcedd88522ddc6978f5' => __DIR__ . '/..' . '/stripe/module-payments/registration.php',
         '21e1f66f21c1487486dda2a7c9174cf0' => __DIR__ . '/..' . '/magefan/module-blog/registration.php',
         '43a898c2b52882ecca1f7b0558d3af2c' => __DIR__ . '/..' . '/magento/composer-root-update-plugin/registration.php',
         '0675d4e4a5ec2bff513f44d595f3b063' => __DIR__ . '/..' . '/magento/data-migration-tool/src/Migration/cli_commands.php',
@@ -492,6 +493,8 @@ class ComposerStaticInit4a2e6a61a39436dc6250c06320256192
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
+            'Stripe\\' => 7,
+            'StripeIntegration\\Payments\\' => 27,
             'Seld\\PharUtils\\' => 15,
             'Seld\\JsonLint\\' => 14,
             'Safe\\' => 5,
@@ -1089,6 +1092,14 @@ class ComposerStaticInit4a2e6a61a39436dc6250c06320256192
         'Symfony\\Component\\Config\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
+        ),
+        'Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
+        'StripeIntegration\\Payments\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/module-payments',
         ),
         'Seld\\PharUtils\\' => 
         array (

@@ -4,7 +4,14 @@
  * See COPYING.txt for license details.
  */
 
+// @codingStandardsIgnoreFile
+
 /** @var $block \Magento\Catalog\Block\Product\View */
+$actionPosition = '';
+$at_settings = $this->helper('Olegnax\Athlete2\Helper\Helper')->getConfig('athlete2_settings/product');
+if ( ('2' == $at_settings[ 'actions_position' ] || $at_settings[ 'product_social_min' ]) && $this->helper('Magento\Wishlist\Helper\Data')->isAllow() ) {
+    $actionPosition='actions--right-to-cart';
+}
 ?>
 <?php $_product = $block->getProduct(); ?>
 
@@ -12,8 +19,16 @@
   <?php
     $blockObj= $block->getLayout()->createBlock('Nuadesign\CustomProduct\Block\GravityGift');
     $productObj = $blockObj->getProductBySku('GRAVITY-BOX');
+    $price = $blockObj->getPriceFormatted($productObj); 
+
+   //echo $finalAmtPrice = $productObj->getPriceInfo()->getPrice('final_price')->getAmount();
+   //echo $english_format_number = number_format($finalAmtPrice, 2, '.', '');
+    //$finalPriceAmt = $productObj->getPrice();
+
     $finalPrice = $productObj->getPriceInfo()->getPrice('final_price')->getAmount()->getValue();
-    $price = $this->helper('Magento\Framework\Pricing\Helper\Data')->currency(number_format($finalPrice,2), true , false);
+    $finalAmt = $this->helper('Magento\Framework\Pricing\Helper\Data')->currency(number_format($finalPrice,2), true , false);
+
+    $priceFormatted = $this->helper('Magento\Framework\Pricing\Helper\Data')->currency(number_format($productObj->getPrice(), 2), true, false);
   ?>
     
     <div class="input-box">
@@ -21,29 +36,32 @@
             <li>
                 <input type="hidden" class="giftproduct-qty" name="giftproductqty" value="1"/>
                 <input type="checkbox" class="checkbox product-custom-option focusAttached" name="giftproduct" id="product_id_<?php echo $productObj->getId(); ?>" value="<?php echo $productObj->getId(); ?>" price=""><span class="label">
-                <label for="product_id_<?php echo $productObj->getId(); ?>"><?php echo __('Add gift box') ?><span class="price-notice">+<span class="price"><?php echo $price ?></span></span></label></span>
+                <label for="product_id_<?php echo $productObj->getId(); ?>"><?php echo __('Add gift box') ?><span class="price-notice">+<span class="price"><?php echo $finalAmt ?></span></span></label></span>
             </li>
         </ul>
     </div>
 <?php endif; ?>
 
 <?php $buttonTitle = __('Add to Cart'); ?>
-<?php if ($_product->isSaleable()) :?>
-<div class="box-tocart">
+<?php $buttonIcon = '<svg id="cart-icon-small" data-name="cart-icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16"><rect class="svg-fill-none" x="5" y="2" width="4" height="1"/><polygon class="svg-fill-none" points="11 7 9 7 9 5 5 5 5 7 3 7 3 5 2 5 2 14 12 14 12 5 11 5 11 7"/><path d="M12,3V0H4V3H1V16H15V3H12ZM6,2h4V3H6V2Zm7,12H3V5H4V7H6V5h4V7h2V5h1v9Z" transform="translate(-1)"/></svg>' ?>
+<?php if ($_product->isSaleable()): ?>
+<div class="box-tocart <?= $block->escapeHtml($actionPosition) ?>">
     <div class="fieldset">
-        <?php if ($block->shouldRenderQuantity()) :?>
+        <?php if ($block->shouldRenderQuantity()): ?>
         <div class="field qty">
             <label class="label" for="qty"><span><?= $block->escapeHtml(__('Qty')) ?></span></label>
-            <div class="control">
+            <div class="control qty-controls-wrap">
+                <a class="icon-minus qty-minus"></a>
+                <a class="icon-plus qty-plus"></a>
                 <input type="number"
                        name="qty"
                        id="qty"
                        min="0"
-                       value="<?= $block->getProductDefaultQty() * 1 ?>"
+                       value="<?= $block->escapeHtmlAttr($block->getProductDefaultQty() * 1) ?>"
                        title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
                        class="input-text qty"
                        data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
-                       />
+                       />               
             </div>
         </div>
         <?php endif; ?>
@@ -52,7 +70,7 @@
                     title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"
                     class="action primary tocart"
                     id="product-addtocart-button" disabled>
-                <span><?= $block->escapeHtml($buttonTitle) ?></span>
+                <?= /* @noEscape */ $buttonIcon ?><span><?= $block->escapeHtml($buttonTitle) ?></span>
             </button>
             <?= $block->getChildHtml('', true) ?>
         </div>
@@ -62,7 +80,20 @@
 <script type="text/x-magento-init">
     {
         "#product_addtocart_form": {
-            "Magento_Catalog/js/validate-product": {}
+            "AtProductValidate": {}
         }
     }
+</script>
+<script>
+    require(['tippy'], function (tippy) {
+        tippy('.js-tippy-btn', {
+            delay: 0,
+            arrow: true,
+            arrowType: 'sharp',
+            size: 'regular',
+            duration: 200,
+            animation: 'shift-toward',
+            distance: '0'
+        })
+    });
 </script>

@@ -26,6 +26,26 @@
     .coverterwe.desktop-clothing-menu {
         display: none;
     }
+    .clothing-accessories{
+        .ox-megamenu-block.ox-megamenu-block-right.ox-menu-col.ox-menu-col-6{
+                flex: 0 0 100%;
+                max-width: 56%;
+        }
+    } 
+    .categorypath-guinness-at-home{
+        .block-title.title-h3{
+            &:before{
+                    width: 0px;
+            }
+            &:after{
+                    width: 0px;
+            }
+        }
+    }
+    .coverterwe {
+        display: flex;
+        flex-wrap: inherit;
+    }
     .clothing-accessories {
         .ox-menu-col{
             max-width: 70%;
@@ -47,6 +67,9 @@
                 h2{
                     font-size: 25px;
                 }
+                .costam_btn{
+                    padding: 7px 20px;
+                }
             }
         }
     }
@@ -64,8 +87,34 @@
                 top: 14%;
             }
         }
-    }  
-
+    }
+    .checkout-container{
+    	#checkout-shipping-method-load{
+		    .table-checkout-shipping-method{
+		    	width: 100%;
+		    	tbody{
+		    		td{
+		    			padding: 20px 5px;
+		    		}
+		    	}
+		    }
+		}
+	}  
+    .owl-stage-outer{
+        li.product-item {
+            width: 100%;
+        }
+    }
+    .centered-iblocks.-stretch{
+        .iblock{
+            padding: 25px 5px;
+        }
+    } 
+    .centered-iblocks.-stretch{
+        > div{
+            padding: 25px 5px;
+        }
+    } 
 }
 
 //1024
@@ -90,6 +139,26 @@
             }
         }  
     } 
+    .catalog-category-view{
+        .column.main{
+            .breadcrumbs {
+                padding: 20px;
+                padding-top: 25px;
+            }
+        }
+    } 
+    .main_contant {
+        margin-top: 0;
+    }
+
+    .giftcard-information-container{
+        .giftcard-field-label{
+            text-align: left;
+        }
+    } 
+    .ox-menu__block-before {
+        display: none;
+    }
     .home-page-banner {
         padding: 30px 15px;
         .main-banner-.section{
@@ -109,7 +178,7 @@
                     font-size: 19px;
                     color: #fff;
                     text-transform: uppercase;
-                    font-family: 'Open Sans';
+                    font-family: 'Gotham Book';
                     font-weight: 600;
                     line-height: 30px;
                 }
@@ -119,6 +188,21 @@
             }
         }
     }
+    .above-footer-content{
+        .row.centered-iblocks.-stretch{
+            >div {
+                flex: auto;
+                width: 100%;
+                margin-bottom: 0px;
+                justify-content: flex-start;
+            }
+            &:first-child{
+                >div {
+                    padding-left: 25px;
+                }
+            }
+        }
+    } 
     .page-header{
         .logo__container{
             margin: 10px auto 0 0;
@@ -127,6 +211,11 @@
     .container.a-center.same_rtifgt{
         .ox-banner-link{
             margin-bottom: 15px;
+        }
+    }
+    .catalog-category-view{
+        .page-main{
+            padding-top: 0px;
         }
     }
 }
@@ -140,6 +229,252 @@
             margin-bottom: 16px;
         }
     }
+    .actions-toolbar {
+        margin-top: 20px;
+    }
+    .catalog-category-view{
+        .column.main{
+            .breadcrumbs {
+                padding: 20px;
+                padding-top: 25px;
+            }
+        }
+    } 
+    .category-image, .category-description {
+        margin-bottom: 0;
+    }
+     .owl-carousel.widget-product-grid{
+        .owl-nav{
+            button.owl-prev{
+                left: 0;
+                background: transparent;
+            }
+            button.owl-next{
+                right: 0;
+                background: transparent;
+            }
+             button.owl-next{
+                span{
+                    height: 38px;
+                    width: 24px;
+                    &:before{
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                        height: 23px;
+                        top: 0px;
+                    }
+                    &:after{
+                        height: 23px;
+                        top: 15px;
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                    }
+                }
+             } 
+             button.owl-prev{
+                span{
+                    height: 38px;
+                    width: 24px;
+                    &:before{
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                        height: 23px;
+                        top: 0px;
+                    }
+                    &:after{
+                        height: 23px;
+                        top: 15px;
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                    }
+                }
+             } 
+        }
+    } 
+     .athlete2_product__bottom{
+        .related{
+            .owl-carousel{
+                .owl-nav{
+                    visibility: visible;
+                    opacity: 1;
+                }   
+                .owl-dots{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+        .upsell{
+            .owl-carousel{
+                .owl-nav{
+                    visibility: visible;
+                    opacity: 1;
+                }   
+                .owl-dots{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .owl-nav button.owl-next:hover span:before, .owl-nav button.owl-prev:hover span:before, .owl-nav button.owl-next:hover span:after, .owl-nav button.owl-prev:hover span:after {
+        background: #ffffff;
+    }
+    .ox-dropdown--megamenu{
+        > .ox-megamenu__dropdown{
+            .ox-megamenu-list{
+                > .category-item{
+                     > a{
+                        &:hover{
+                            color: #000000 !important;
+                        }
+                     }
+                }
+            }
+        }
+    }   
+    .block-viewed-products-grid{
+        .owl-dots {
+            display: none;
+        }
+        .crosssell{
+             .owl-carousel{
+                .owl-nav{
+                    visibility: visible;
+                    opacity: 1;
+                }
+             }
+        } 
+    }
+    .product-guinnessr-gravity{
+        main#maincontent{
+            .product-custom-description{
+                .product-video-section{
+                    #bgvideo{
+                        height: 435px;
+                    }
+                    .product-video-text{
+                        h2{
+                            font-size: 48px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    .product-guinnessr-images{
+        .col-custom {
+            margin: 15px;
+        }
+    }
+    .presentation-box {
+        .presentation-box-section{
+            .presentation-box-text {
+                padding: 0 15px;
+            }
+        }
+    }
+    .product-guinnessr-gravity{
+        main#maincontent{
+            .product-info-main{
+                margin-bottom: 0;
+            }
+        }
+    }  
+    .product-info-main{
+        .page-title-wrapper{
+            .page-title{
+                margin-top: 30px;
+            }
+        }
+    } 
+        .category-official-guinness-glassware {
+            .col-12.col-sm-4.a-center {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+                display: block;
+                .glassware-category-img{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .categorypath-guinness-at-home{
+            .col-12.col-sm-4.a-center {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+                display: block;
+                .homebar-category-img{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .col-12.col-sm-6.a-center{
+                flex: 0 0 100%;
+                max-width: 100%;
+                .homebar-category-img{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    .ox-slideout{
+        .header.links{
+            a{
+                font-size: 30px !important;
+            }
+        }
+    }  
+    .ox-menu__block-before {
+        display: none;
+    }
+    .product-guinnessr-gravity{
+        main#maincontent{
+            padding-left: 15px;
+            padding-right: 15px;
+             .product.media{
+                    padding-left: 0;
+             }
+             .product-custom-description{
+                .product-guinnessr-des{
+                    flex-wrap: wrap;
+                    .product-guinnessr-lef{
+                        padding: 40px 15px;
+                    }
+                }
+             }  
+        }
+        .admin__data-grid-outer-wrap{
+            padding: 0 0;
+        }
+        .athlete2_product__bottom{
+            padding: 0;
+            margin-top: 50px;
+        }        
+    }
+    .ox-dropdown--megamenu{
+         > .ox-megamenu__dropdown{
+            .ox-megamenu__categories{
+                .ox-megamenu-list{
+                    > .category-item{
+                        > a{
+                            font-size: 24px;
+                            padding: 0 15px;
+                        }
+                    }
+                }
+            }
+         }
+    }    
     .personalised-carousel{
         .ox-carousel__inner{
             &:after{
@@ -168,30 +503,33 @@
         .box-tocart{
             .actions{
                  .action.tocart{
-                    font-size: 25px;
+                    font-size: 24px;
                     font-weight: 400;
                     margin-bottom: 15px;
                  }
             }
         }
     }  
-    .personalised-carousel{
-        .ox-carousel__inner{
-            .ox-carousel__content{
-                img{
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-        }
+    .personalised-carousel{        
         .product.details.product-item-details{
             .actrions{
                  span.button.secondary.medium.ox-show-hover.ox-moveup-hover{
-                    font-size: 21px;
+                    font-size: 20px;
                  }
             }
         } 
-    }   
+    }
+    .home-page-banner{
+        .main-banner-.section{
+            .banner-title{
+                a.button.naked.long.h6.primary{
+                    span{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }       
     .glassware-categories{
         .block-align-vertical{
             .ox-banner:last-child{
@@ -222,6 +560,11 @@
     } 
     .trending-categories-section {
         margin: 25px 20px 50px;
+        .trending-title{
+            h6{
+                font-size: 40px;
+            }
+        }
     }
     .clothing-categories-section{
         margin: 45px 45px;
@@ -229,11 +572,25 @@
             display: block;
             margin-bottom: 20px;
             h6{
-                font-size: 50px;
+                font-size: 40px;
                 margin: 10px 0;
             }
         }
     }
+    .personalised-carousel{
+        .ox-carousel__inner{
+            h6 {
+                font-size: 40px;
+            }
+        }
+    }
+    .promo-block-categories-grid{
+        .promo-block-categories__text{
+             .title{
+                   font-size: 48px;
+             }
+        }
+    } 
     .home-page-banner {
         padding: 30px 15px;
         .main-banner-.section{
@@ -253,7 +610,7 @@
                     font-size: 19px;
                     color: #fff;
                     text-transform: uppercase;
-                    font-family: 'Open Sans';
+                    font-family: 'Gotham Book';
                     font-weight: 600;
                     line-height: 30px;
                 }
@@ -288,9 +645,9 @@
                 padding: 20px;
                 margin-top: -32px;
                 h2{
-                    font-size: 72px;
-                    line-height: 36px;
-                    margin-top: -35px;
+                    font-size: 40px;
+                    line-height: 48px;
+                    margin-top: -48px;
                     br{
                         display: none;
                     }
@@ -302,6 +659,42 @@
         }
     }
 }
+
+//768
+@media only screen and (max-width: (@screen__768)) { 
+    .action.primary{
+       font-size: 20px;
+    }
+    .footer--layout-2{
+        .footer.content{
+            .block.newsletter.newsletter-style--big{
+                .action.primary{
+                    font-size: 20px; 
+                }
+            }
+        }
+    }  
+    .category-guinness-at-home{
+        .coustrant_condistrt{
+            .block-align-vertical{
+                .block.widget{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+    .checkout-cart-index{
+        .block.additional-products.at-carousel.crosssell.owl-dots--align-left.owl-nav--position-hover.title--align-.owl-dots--show {
+            width: 100%;
+        }
+        .cart-container{
+            .form-cart{
+                order: 0;
+            }
+        }
+    }   
+}
+
 
 //767
 @media only screen and (max-width: (@screen__767)) { 
@@ -319,15 +712,770 @@
             }
         }
     }
+    li.level0.category-item.active a i:before {
+        background: #fff !important;
+    }
+    li.level0.category-item.active a i:after {
+        background: #fff !important;
+    }
+    .account .column.main .actions-toolbar .primary .action.primary {
+        font-size: 20px !important;
+    }
+    form#check-code-form button.action.action-check.primary {
+        padding: 9px 20px !important;
+    }
+    .footer--layout-4 .footer.content .block.newsletter.newsletter-style--big, .footer--layout-2 .footer.content .block.newsletter.newsletter-style--big {
+        padding-top: 60px;
+        padding-bottom: 0 !important;
+        margin-bottom: 0;
+    }
+    .ox-megamenu-navigation{
+        > .level0{
+            > .level-top{
+                &:after{
+                    display:none !important;
+                }
+            }
+        }
+    }  
+    .ox-megamenu-navigation{
+        li{
+            >a{
+                .ox-menu-arrow{
+                    top: auto !important;
+                }
+            }
+        }
+    }
+    .ox-megamenu-navigation{
+        li.parent{
+            > a{
+                .ox-menu-arrow{
+                    top: auto !important;
+                }
+            }
+        }
+    }   
+    a.action.back {
+        font-size: 20px !important;
+    }
+    .athlete2_product__bottom{
+        .owl-dots {
+            display: none;
+        }
+    }
+    .cms-shipping-returns{
+        p {
+            a { 
+                font-size: 20px;
+            }
+        }
+    }
+    .customer-account-create{
+        .secondary {
+            background: transparent !important;
+            margin: 0 -55px -55px;
+        }
+    }
+    .ox-dropdown--megamenu{
+        > .ox-megamenu__dropdown{
+            .ox-megamenu__categories{
+                .ox-megamenu-list{
+                    > .category-item{
+                        > a{
+                            font-size: 18px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }     
+    .gift-card-apply {
+        button.action.secondary {
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+    .product-info-main{
+        .page-title-wrapper{
+            .page-title {
+                font-size: 40px !important;
+            }
+        }
+    }  
+    .sidebar.sidebar-additional {
+        .block-wishlist {
+            .actions-toolbar {
+                .action.details {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .owl-nav button.owl-prev:hover span:before{
+        background: #ffffff;
+    }
+    .form.check-code{
+        .actions{
+            min-width: auto;
+        }
+    } 
+    .wishlist-index-index .products-grid.wishlist + .actions-toolbar .action {
+        width: 100%;
+        font-size: 20px;
+    }
+    ox-dropdown--megamenu{
+        >.ox-megamenu__dropdown{
+            .ox-megamenu-list{
+                >.category-item{
+                    >a{
+                        &:hover{
+                            color:#000;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+    .ox-modals__holder{
+        .ox-slideout-top {
+            height: 215px;
+        }
+    }
+    .catalog-category-view{
+         h1#page-title-heading {
+            font-size: 40px;
+        }
+    }
+    .personalised-carousel .ox-carousel__inner .ox-carousel__content img {
+        height: auto;
+        width: 250px;
+        margin: 0 auto;
+    }
+    .main_contant.mobile{
+        .converter_contant{
+            p{
+                br{
+                    display: none;
+                } 
+            }
+        }
+    }   
+    .container.a-center.same_rtifgt{
+        .ox-banner-link{
+            .main_iamgestns{
+                top: 6%;
+            }
+        }
+    }  
+    .category-official-guinness-glassware{
+        .glassware-categories{
+            .glassware-category-img{
+                span{
+                    font-size: 30px;
+                }
+            }
+        }
+    }  
+    .footer--layout-2{
+        .footer.content{
+            .block.newsletter.newsletter-style--big{
+                .title{
+                    font-size: 40px;
+                }
+            }
+        }
+    }   
+    .category-guinness-clothing-accessories{
+        .main_title{
+            h2{
+                font-size: 30px;
+                margin-bottom: 35px;
+                padding-top: 10px;
+            }
+        }
+    }  
+    .main_contant.mobile{
+        .converter_contant{
+             p{
+                br {
+                    display: none;
+                }
+             }
+        }
+    }  
+    .clothing-categories-section{
+        .clothing-categories{
+            .clothing-category-details{
+                span{
+                    margin-bottom: 35px;
+                    font-size: 30px;
+                }
+            }
+        }
+        .col-12.col-sm-4.a-center{
+            &:last-child{
+                .clothing-categories{
+                    .clothing-category-details{
+                        span{
+                             margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+    .d-flex{
+        flex-wrap: wrap;
+    }
+    .promo-block-categories-grid{
+         .ox-banner-link{
+            margin-right: 0;
+         }
+    }
+    .ox-carousel.ox-nav__simple{
+        .owl-nav{
+             button.owl-next{
+                right: 0;
+             }
+             button.owl-prev{
+                left: 0;
+             }
+        }
+    } 
+    .catalog-product-view{
+        .owl-nav{
+            button.owl-prev{
+                left: 0 !important;
+                background: transparent !important;
+            }
+            button.owl-next{
+                right: 0 !important;
+                background: transparent !important;
+            }
+             button.owl-next{
+                span{
+                    height: 38px;
+                    width: 24px;
+                    &:before{
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                        height: 23px !important;
+                        top: 0px;
+                    }
+                    &:after{
+                        height: 23px !important;
+                        top: 15px;
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                    }
+                }
+             } 
+             button.owl-prev{
+                span{
+                    height: 38px;
+                    width: 24px;
+                    &:before{
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                        height: 23px !important;
+                        top: 0px;
+                    }
+                    &:after{
+                        height: 23px !important;
+                        top: 15px !important;
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                    }
+                }
+             } 
+        }
+    }
+    .owl-carousel.widget-product-grid{
+        .owl-nav{
+            button.owl-prev{
+                left: 0;
+                background: transparent;
+            }
+            button.owl-next{
+                right: 0;
+                background: transparent;
+            }
+             button.owl-next{
+                span{
+                    height: 38px;
+                    width: 24px;
+                    &:before{
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                        height: 23px;
+                        top: 0px;
+                    }
+                    &:after{
+                        height: 23px;
+                        top: 15px;
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                    }
+                }
+             } 
+             button.owl-prev{
+                span{
+                    height: 38px;
+                    width: 24px;
+                    &:before{
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                        height: 23px;
+                        top: 0px;
+                    }
+                    &:after{
+                        height: 23px;
+                        top: 15px;
+                        background: #000000;
+                        width: 4px;
+                        left: 9px;
+                    }
+                }
+             } 
+        }
+    }  
+    .presentation-box {
+        .presentation-box-section{
+            flex-wrap: wrap;
+            .presentation-box-text {
+                padding: 50px 15px;
+            }
+            .presentation-box-img{
+                width: 100%;
+            }
+        }
+    }
+    .product-guinnessr-gravity{
+        main#maincontent{
+            .product-custom-description{
+                .product-video-section{
+                    #bgvideo{
+                        height: 435px;
+                    }
+                    .product-video-text{
+                        h2{
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }         
+    .product-guinnessr-images{
+        .col-custom{
+            margin:0 22px;
+            img{
+                margin: 50px 0 0;
+            }
+            &:last-child{
+                img{
+                    margin: 50px 0 ;
+                }
+            }
+        }
+    }
+    button{
+        &:after {
+            display: none;
+        }
+    }
+    span {
+        display: inline-block;
+    }
+
+    .hightlighted-text{
+        &:before{
+            display:none;
+        }
+    }
+    .ox-megamenu-block.ox-megamenu-block-right.ox-menu-col.ox-menu-col-6 {
+        display: none;
+    }
+    .athlete2_product__bottom{
+        .related{
+            .owl-carousel{
+                .owl-nav{
+                    visibility: visible;
+                    opacity: 1;
+                }   
+                .owl-dots{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+        .upsell{
+            .owl-carousel{
+                .owl-nav{
+                    visibility: visible;
+                    opacity: 1;
+                }   
+                .owl-dots{
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+   .trending-categories-section{
+        .owl-carousel.widget-product-grid {
+            .owl-nav {
+                visibility: visible;
+                opacity: 1;
+            }
+        }   
+    }
+    .block.widget {
+        .recently-viewed {
+            .products-grid {
+                .owl-carousel {
+                    .product-item {
+                        max-width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+    .checkout-shipping-address {
+        margin-top: 35px !important;
+        display: block;
+    }
+    .button-custom{
+        font-size: 20px !important;
+        margin-bottom: 25px;
+    }
+    .btn-actrions{
+        font-size: 20px;      
+    }
+    button.button-custom {
+        font-size: 20px !important;
+    }
+    .product-guinnessr-gravity{
+        main#maincontent{
+            padding-left: 15px;
+            padding-right: 15px;
+             .product.media{
+                    padding-left: 0;
+             }
+             .product-custom-description{
+                 margin-bottom: 50px;
+                 .product-video-section{
+                    .product-video-text{
+                        padding: 50px 15px;
+                    }
+                 } 
+                .product-guinnessr-des{
+                    flex-wrap: wrap;
+                    .product-guinnessr-lef{
+                        padding: 15px;
+                        margin-top: 50px;
+                        width: 100%;
+                        .product-fix{
+                            max-width: 100%;
+                            h4{
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                    .product-guinnessr-right{
+                        width: 100%;
+                        padding: 50px 15px;
+                        margin-top: 25px;
+                    }
+                }
+                .main_routings{
+                    .container{
+                        .guinness-draught-content{
+                            margin: 50px 0;
+                            .d-flex.draught-content-flex{
+                                flex-wrap: wrap;
+                                .col-custom{
+                                    width: 100%;
+                                    .draught-content{
+                                        padding-top: 50px;
+                                        padding-left: 0px;
+                                        padding-bottom: 25px;
+                                    }
+                                }
+                                &:nth-child(2){
+                                    .col-custom{
+                                        .draught-content{                                            
+                                            text-align: left;
+                                            padding-right: 53px;
+                                            padding-left: 0px;
+                                        }
+                                    } 
+                                }
+                            }
+                        }
+                    }  
+                }
+             }
+             .product-info-main{
+                padding-right: 0;
+             }  
+        }
+        .admin__data-grid-outer-wrap{
+            padding: 0 0;
+        }
+        .athlete2_product__bottom{
+            padding: 0;
+            margin-top: 50px;
+        }        
+    }
+    button.action.secondary{    
+        padding: 10px 20px;
+        span {
+            font-size: 22px;
+        }
+    }
+    button.action.action-apply{
+        span {
+            font-size: 22px;
+        }
+    }
+    button.action.action-cancel{
+        span {
+            font-size: 22px;
+        }
+    }
+    button.action.action-update{
+        span {
+            font-size: 22px;
+        }
+    }
+    .product-info-main {
+        .box-tocart{
+            .input-text.qty{
+                    margin-bottom: 15px;
+            }
+        } 
+    }
+    .main_contant{
+        margin-top: 0;
+    }
+    .home-page-banner{
+        .main-banner-.section{
+            .banner-title{
+                a.button.naked.long.h6.primary{
+                   span{
+                        font-size: 22px !important;
+                   } 
+                }
+            }
+        }
+    }  
+    button.action.primary.checkout{
+         span {
+            font-size: 20px !important;
+        }
+    }
+    button.action.primary.checkout{
+        span {
+            font-size: 20px !important;
+        }   
+    }  
+    .action.primary{
+       font-size: 20px !important;
+    }
+    a.action.viewcart{
+        font-size: 20px !important;
+    }
+    a.action.continue{
+         font-size: 20px !important;
+    }
+    button.action.update{
+        span{
+            font-size: 20px !important;
+        }
+    }
+    .footer--layout-2{
+        .footer.content{
+            .block.newsletter.newsletter-style--big{
+                .action.primary{
+                    span{
+                        font-size: 20px !important; 
+                    }
+                }
+            }
+        }
+    }
+    .row.no-margin.coustamotyr {
+        flex-direction: column-reverse;
+    }
+    .twin-packs-menu-space{
+        img {
+            width: 100px;
+        }
+    }
+    .product-add-form{
+        .fieldset{
+            > .field:not(.choice){
+                > .label{
+                    padding: 0;
+                    display: block;
+                    background: transparent;
+                }
+            }
+        }
+    }
+    .action.action-edit-address{
+        span{
+            font-size: 22px;
+        }
+    }
+    .giftcard-template-container{
+        min-height: auto;
+        .giftcard-template-container-preview{
+            height: 350px;
+        }
+    }
+    .product.media {
+        margin-bottom: 0;
+    } 
+    .giftcard-template-setting-content {
+        .giftcard-template-choose-images{
+            margin: 0;
+        }
+        .owl-carousel{
+            .owl-stage{
+                float: left !important;
+                width: auto !important;
+                margin-left: 10px !important;
+                transform: none !important;
+            }
+        }
+    } 
+    .giftcard-information-container{
+        .giftcard-field-wrapper{
+            .giftcard-amount{
+                float: left;
+                text-align: left;
+            }
+            .giftcard-delivery{
+                text-align: left;
+            }
+        }
+    }
+    .product-e-gift-card{
+        .athlete2_product__bottom{
+            display: none;
+        }
+    }
+    .checkout-container{
+        .opc-wrapper{
+           .step-title{
+                margin-top: 0;
+           } 
+        }
+    }  
+    .container.a-center.same_rtifgt{
+        .ox-banner-link{
+            .main_iamgestns{
+                a.hightlighted-text.shop-all{
+                    font-size: 20px;
+                }
+            }
+        }
+    }   
+    .glassware-categories{
+        .block-align-vertical{
+             .ox-banner{
+                .category-caption.caption-blue{
+                    .hightlighted-text.shop-all{
+                        font-size: 20px;
+                    }
+                } 
+             }
+        }
+    }  
+    .promo-block-categories-grid{
+        .promo-block-categories__text{
+            ul{
+                li{
+                    a.button.naked.long.h6.primary{
+                        span{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }      
+    .category-official-guinness-glassware{
+         .glassware-categories{
+                margin-bottom: 30px;
+         }
+    }
+    .category-guinness-clothing-accessories{
+        .imagemain{
+            .main_stert{
+                .main_btn{
+                    font-size: 20px;
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }   
+    .checkout-container{
+        #checkout-shipping-method-load{
+            .table-checkout-shipping-method {
+                width: 100%;
+            }
+        }
+    }
+    .giftcard-information-container{
+        .giftcard-field-label{
+            text-align: left;
+        }
+    } 
+    .product-reviews-summary{
+        .reviews-actions{
+            a{
+                padding: 0;
+            }
+        }
+    } 
+    .column.main{
+        .block-align-vertical{
+            .block{
+                &:last-child{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }  
+    .catalog-category-view{
+        .column.main{
+            .breadcrumbs {
+                padding: 20px;
+                padding-top: 25px;
+            }
+        }
+    }  
     .container.a-center.same_rtifgt{
         .ox-banner-maintors{
              .main_iamgestns{
                  padding: 20px;
                  h6{
-                    font-size: 24px;
+                    font-size: 40px;
                  }
                 a.hightlighted-text.shop-all{
-                    font-size: 25px;
+                    font-size: 20px;
                     padding: 10px 15px;
                 }
              }
@@ -341,7 +1489,7 @@
             }
             .a-center{
                 h6{
-                    font-size: 28px;
+                    font-size: 30px;
                 }
             }
         }
@@ -349,14 +1497,15 @@
     .personalised-carousel{
         .ox-carousel__inner{
             &:after{
-                background-size: auto;
-                background-position: unset;
+                background-size: contain;
+                background-position: bottom;
+                bottom: -15px;
             }
         }
     } 
     .category-guinness-clothing-accessories{
         .text_inshorting{
-            margin-bottom: 25px;
+            margin-bottom: 0px;
         }
     } 
     .category-official-guinness-glassware{
@@ -370,12 +1519,12 @@
                 .category-caption.caption-blue{
                     p{
                         a{
-                            font-size: 48px;
-                            line-height: 48px;
+                            font-size: 40px;
+                            line-height: 60px;
                         }
                     }
                     .hightlighted-text.shop-all{
-                        font-size: 25px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -385,6 +1534,7 @@
         .homebar-category-details{
             a{
                 margin-bottom: 35px;
+                line-height: 35px;
             }
         }
         .homebar-categories{
@@ -395,7 +1545,7 @@
         .coustrant_condistrt{
             .block-align-vertical{
                 .block.widget{
-                    margin-bottom: 0;
+                    margin-bottom: 50px;
                 }
             }
         }
@@ -408,7 +1558,7 @@
             .ox-megamenu-navigation{
                 >.level0{
                     >.level-top{
-                        font-size: 36px;
+                        font-size: 30px;
                     }
                 }
             }
@@ -429,24 +1579,17 @@
     .container.a-center.same_rtifgt{
         .ox-banner-link{
             .main_iamgestns{
-                top: auto;
-                padding: 20px;
-                left: 0;
-                bottom: 0;
-                text-align: center;
-                text-align: center;
-                right: 0;
                 h6{
-                    font-size: 24px;
+                    font-size: 40px;
                     margin-bottom: 5px;
                 }
                 p{
-                    font-size: 10px;
+                    font-size: 16px;
                     margin-bottom: 10px;
                 }
                 a{
                     padding: 10px 15px;
-                    font-size: 25px;
+                    font-size: 20px;
                 }
             }
         }
@@ -487,15 +1630,16 @@
             right: 0;
             padding: 20px;
             h2{
-                font-size: 36px;
-                line-height: 16px;
-                margin-top: -27px;
+                font-size: 48px;
+                line-height: 40px;
+                margin-top: -40px;
                 br{
                     display: none;
                 }
             }
             p{
-                font-size: 13px;
+                font-size: 16px;
+                line-height: 24px;
             }
         }
     }
@@ -519,10 +1663,19 @@
         .block-title{
             text-align: left;
             padding: 0 10px;
-            margin-top: 30px;
+            margin-top: 15px;
         }
-    } 
+    }   
     .category-official-guinness-glassware{
+        .block-align-vertical{
+            .ox-banner{
+                .category-caption.caption-blue{
+                    p{
+                        line-height: 40px;
+                    }
+                }
+            }
+        }   
         .category-cms{
             .row.no-margin.coustamotyr{
                 flex-direction: column-reverse;
@@ -575,12 +1728,17 @@
         .copyright{
             span{
                img{
-                    margin: 0 5px;
+                    margin: 0 20px;
                } 
             }
         }  
         .copy-rights-content{
             padding-left: 0;
+            ul{
+                li{
+                    width: 50%;
+                }
+            }
         }
     } 
     .menu--align-center{
@@ -596,8 +1754,8 @@
                 .category-caption.caption-blue{
                     p{
                         a{
-                            font-size: 48px;
-                            line-height: 48px;
+                            font-size: 40px;
+                            line-height: 40px;
                         }
                     }
                 }
@@ -622,7 +1780,7 @@
                         font-size: 11px;
                     }
                     .hightlighted-text.shop-all{
-                        font-size: 11px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -630,7 +1788,7 @@
     }    
     .ox-banner-maintors{
         .custom-text{
-            font-size: 21px;
+            font-size: 30px;
             line-height: 30px;
             margin: 0;
         }
@@ -657,7 +1815,166 @@
             }
         }
     }
+
+    .promo-block-categories-grid {
+        .promo-block-categories__text {
+            .title {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .category-official-guinness-glassware {
+        .block-align-vertical {
+            .ox-banner {
+                .category-caption.caption-blue {
+                    .cat-description {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .category-guinness-at-home {
+        .block-title.title-h3 {
+            h3 {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .category-guinness-at-home {
+        .homebar-category-details {
+            a {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .product-info-main {
+        .page-title-wrapper {
+            .page-title {
+                font-size: 40px;
+            }
+        }
+    }
+    .account {
+        .column.main {
+            .box-actions {
+                .action {
+                    font-size: 20px;
+                }
+            }  
+        }
+    }
+
+    .sidebar {
+        .product-items {
+            .action.tocart {
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 } 
+
+//640
+@media only screen and (min-width: (@screen__640)) {
+    .modal__right{
+        .minicart-wrapper{
+            .action.showcart{
+                span{
+                    line-height: 16px;
+                    font-size: 14px;
+                }
+                span.counter.qty{
+                    width: 17px;
+                    height: 17px;                   
+                }
+            }
+        }
+    }
+    .checkout-index-index{
+        .minicart-wrapper{
+          .action.showcart{
+            span.counter.qty{
+                width: 17px;
+                height: 17px;
+                top: -7px;
+                right: 0;
+                position: absolute;
+                .counter-number{
+                    border-radius: 30px;
+                    line-height: 16px;
+                    -webkit-transform: translateZ(0);
+                    width: 18px;
+                }
+            }
+          }  
+        }
+    }
+    .menu-style-2{
+        .page-header{
+            .header__content{
+                .minicart-wrapper{
+                  .action.showcart{
+                    span.counter.qty{
+                        width: 17px;
+                        height: 17px;
+                        top: -7px;
+                        right: 0;
+                        position: absolute;
+                        .counter-number{
+                            border-radius: 30px;
+                            line-height: 16px;
+                            -webkit-transform: translateZ(0);
+                            width: 18px;
+                        }
+                    }
+                  }  
+                }
+            }
+        }
+    }      
+}
+//640
+@media only screen and (max-width: (@screen__640)) {
+    .modal__right{
+        .minicart-wrapper{
+            .action.showcart{
+                span{
+                    line-height: 16px;
+                    font-size: 14px;
+                }
+                span.counter.qty{
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+        }
+    }
+    .menu-style-2{
+        .page-header{
+            .header__content{
+                .minicart-wrapper{
+                  .action.showcart{
+                    span.qty{
+                        width: 17px;
+                        height: 17px;
+                    }
+                  }  
+                }
+            }
+        }
+    }  
+    .fieldset > .field .fields.group.group-2 .field, .fieldset > .fields > .field .fields.group.group-2 .field{
+        width: 100% !important;
+        margin-bottom: 15px;
+    }    
+}
 
 //479
 @media only screen and (max-width: (@screen__xs - 1)) {
@@ -694,6 +2011,11 @@
                 }
             }
         }
+    }
+    .checkout-payment-method .checkout-billing-address .choice {
+        margin-bottom: 15px;
+        font-weight: 700;
+        display: flex;
     }
 }
 
